@@ -11,6 +11,7 @@ build:
   tags:
     - dind-runner
   script:
+    - git config --global --add safe.directory "$CI_PROJECT_DIR"
     - python3 scripts/build.py
   artifacts:
     paths:
