@@ -1,0 +1,45 @@
+- id: award-0
+  year: "2025"
+  text: "**2024 Nico Rüpke-Preis** (DGfK), Best Paper of the Year Award for *“Generative Text-to-Image Diffusion for Automated Map Production Based on Geosocial Media Data”*  in KN Vol. 74, €2,000.00"
+  tags:
+    - core
+- id: award-1
+  year: "2024"
+  text: "**Featured Paper** for *“Assessing Perceived Landscape Change from Opportunistic Spatiotemporal Occurrence Data”*  in LAND 13(7)"
+  tags:
+    - core
+- id: award-2
+  year: "2016"
+  text: "**Nominated for Kurt-Beyer-Preis** (€5,000.00), TU Dresden"
+  tags:
+    - core
+- id: award-3
+  year: "2016"
+  text: "**Research Fellowship**, TU Dresden Graduate Academy, €4,404.00"
+  tags:
+    - core
+- id: award-4
+  year: "2015"
+  text: "**2015 Weddle Prize**, Best Paper of the Year Award for *“Visualizing the perceived environment using crowdsourced photo geodata”*  in Landscape and Urban Planning (Vol. 142)"
+  tags:
+    - core
+- id: award-5
+  year: "2015"
+  text: "**Editors’ Choice** for *“Visualizing the perceived environment using crowdsourced photo geodata”*  in Landscape and Urban Planning (Vol. 142)"
+  tags:
+    - core
+- id: award-6
+  year: "2013"
+  text: "**State of Saxony Fellowship,** €1,790.00"
+  tags:
+    - core
+- id: award-7
+  year: "2012"
+  text: "**Travel Award**, TU Dresden, for 2012 ASLA National Conference, Phoenix, USA"
+  tags:
+    - core
+- id: award-8
+  year: "2012"
+  text: "**Award in Research**, American Society of Landscape Architects (ASLA), Student Awards 2012"
+  tags:
+    - core

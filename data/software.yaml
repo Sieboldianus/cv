@@ -1,0 +1,54 @@
+- id: sw-0
+  label: Carto-Lab Docker
+  url: https://cartolab.fdz.ioer.info/
+  description: '**Open source cartographic visualizations and reproducible spatial data pipelines** based on a Docker container that runs a JupyterLab-Server with a collection of cartographic packages.'
+  tags:
+  - core
+- id: sw-1
+  label: theplink.org
+  url: https://www.theplink.org/
+  description: '**A Docker-based spatial discourse ecosystem to support community engagement and public participation for landscape and urban planning projects**. Progressive Web App (PWA) prototype for federated, decentralized community engagement.'
+  tags:
+  - core
+- id: sw-2
+  label: lbsn.vgiscience.org
+  url: https://lbsn.vgiscience.org/
+  description: '**A common language-independent, privacy-aware and cross-network social-media data scheme,** standardized conceptual data model and implementation for analyzing, comparing and relating information of different LBSN in visual analytics research**. Together with Marc Löchner.**'
+  tags:
+  - core
+- id: sw-3
+  label: app.meingruen.org
+  url: https://app.meingruen.org/
+  description: '**Contribution: Vector & Raster Tile Maps Service for Germany**, processed on a weekly basis from OpenStreetMap data, through Gitlab Continuous Integration and Continuous Deployment (Docker Swarm); together with Mathias Gröbe, TU Dresden.'
+  tags:
+  - core
+- id: sw-4
+  label: pypi.org/project/tagmaps/
+  url: https://pypi.org/project/tagmaps/
+  description: '**Tag Maps Python package** for bottom-up spatial clustering and visualization of subjective attribution of values and meaning from Social Media.'
+  tags:
+  - core
+- id: sw-5
+  label: pypi.org/project/lbsntransform/
+  url: https://pypi.org/project/lbsntransform/
+  description: '**LBSNTransform Python package** for quantitative, GDPR conform and privacy-aware visual analytics of Location Based Social Network (LBSN) data with HyperLogLog (HLL).'
+  tags:
+  - core
+- id: sw-6
+  label: maps.alexanderdunkel.com/
+  url: https://maps.alexanderdunkel.com/
+  description: '**Spatio-temporal tag cloud map browser**, visualizing subjective attribution of meaning and values for sample regions worldwide, based on public geo-social media data.'
+  tags:
+  - core
+- id: sw-7
+  label: RWL Database & Scheme
+  url: https://docs.world-of-experiments.science/
+  description: '**Case reporting for the Real World Laboratories (RWL) network (world-of-experiments.science)**, based on Grist’s no-code database, Keycloak user identity management, and n8n AI agentic automation & integration, in collaboration with the Karlsruhe Institute of Technology (KIT/ITAS).'
+  tags:
+  - core
+- id: sw-8
+  label: training.fdz.ioer.info
+  url: https://training.fdz.ioer.info
+  description: '**IOER NFDI4Biodiversity Jupyter Training**, a platform for reproducible spatial data science based on Jupyter Book and Carto-Lab Docker. It features API integration, geospatial workflows and automated deployment via GitLab CI/CD, supporting the NFDI4Biodiversity goals for open science education.'
+  tags:
+  - core

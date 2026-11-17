@@ -1,0 +1,10 @@
+/site/
+/dist/
+extracted_idml.json
+2026-09-24_CV_A4_CS6_nogreen/
+*.indd
+*.idml
+__pycache__/
+*.py[cod]
+.env
+.DS_Store

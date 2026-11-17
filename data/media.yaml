@@ -1,0 +1,30 @@
+- id: media-0
+  year: '2026'
+  text: |-
+    **Articles following the “Digital Landscape Traces” (data) publication:**
+    - **kreiszeitung.de** – *“Digitales Echo” zeigt die fotogensten Orte Niedersachsens* ^[link](https://www.kreiszeitung.de/lokales/niedersachsen/digitales-echo-zeigt-die-fotogensten-orte-niedersachsens-karte-bietet-unschaetzbaren-nutzen-94179703.html)
+    - **diesachsen.de** – *66 Millionen Posts zeigen beliebte Ausflugsziele* ^[link](https://www.diesachsen.de/wissensland/66-millionen-posts-zeigen-beliebte-ausflugsziele-3100385)
+    - **rnd.de** – *Digitale Spuren von Touristen: Wie beliebt ist Ihr Ort in den sozialen Medien?* ^[link](https://www.rnd.de/lifestyle/digitale-spuren-wie-social-media-die-attraktivitaet-deutscher-orte-zeigt-YABGMVSOVJHYPENFR2JNSKHCYE.html)
+    - **netzpolitik.org** – *Von welchen deutschen Orten posten die meisten Tourist\*innen auf Social Media?* ^[link](https://netzpolitik.org/ticker/ticker-news-von-rnd-vom-09-02-2026/)
+    - **mainpost.de** – *Vom Dom bis zur Schustergasse: Das sind die 12 beliebtesten Orte auf Social Media in Würzburg* ^[link](https://www.mainpost.de/wuerzburg/stadtwuerzburg/social-media-studie-wuerzburg-liegt-bei-posts-an-residenz-vorn-113964058)
+  tags:
+  - core
+- id: media-1
+  year: '2023'
+  text: '**Visualizing opinions, emotions and perceptions in social media data - while preserving user privacy.** Film (JOUL), **Dunkel, A., Hauthal, E., Löchner, M.** ^[link](https://www.vgiscience.org/2022/12/21/visualizing-opinions-emotions-and-perceptions-in-social-media-data-while-preserving-user-s-privacy.html)'
+  tags:
+  - core
+- id: media-2
+  year: '2013'
+  text: |-
+    **What Flickr Can Teach Us About the Way We Photograph Cities**.
+    Interview, The Atlantic Cities ^[link](https://www.bloomberg.com/news/articles/2013-01-15/what-flickr-can-teach-us-about-the-way-we-photograph-cities)
+  tags:
+  - core
+- id: media-3
+  year: '2013'
+  text: |-
+    **The View From The Crowds.**
+    Interview, Landscape Architecture Magazine ^[link](https://landscapearchitecturemagazine.org/2013/01/30/the-view-from-the-crowds/)
+  tags:
+  - core

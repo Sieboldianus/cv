@@ -1,0 +1,50 @@
+- id: teach-0
+  period: 2022–2026
+  text: "**Mobile Cartography Lectures** “Analysis and Visualization of Geo-Social Media” ^[link](https://slides.ad.ioer.info/geosocialmedia_lecture/) and “Python data science 101” ^[link](https://kartographie.geo.tu-dresden.de/ad/python_datascience_2023)"
+  tags:
+    - core
+- id: teach-1
+  period: 2022–2026
+  text: "**Mobile Cartography Workshops**, supervised cartographic workshops (4 SWS) Geo-Pool & Online (Jupyter Hub), evaluation of submitted results. Jupyter ^[link](https://code.ad.ioer.info/jupyter_python_datascience/) & Tagmaps ^[link](https://slides.ad.ioer.info/tagmapsworkshop_tud_2025/); Workshop results WS 2022 ^[link](https://kartographie.geo.tu-dresden.de/results/datascience2023/2023-03-13_MobileCartography_Results.html)"
+  tags:
+    - core
+- id: teach-2
+  period: 2021–2022
+  text: |-
+    **Jupyter Lab Python Spatial Data Science Workshop Series**, together with Madalina Gugulica
+    1. Introduction to Social Media data, Jupyter and python spatial visualizations ^[link](https://kartographie.geo.tu-dresden.de/python_datascience_course/01_raw_intro.html)
+    2. Introduction to privacy issues with Social Media data and possible solutions for cartographers ^[link](https://kartographie.geo.tu-dresden.de/python_datascience_course/02_hll_intro.html)
+    3. Specific visualization techniques example: Tag Maps clustering ^[link](https://kartographie.geo.tu-dresden.de/python_datascience_course/03_tagmaps.html)
+    4. Specific data analysis: Topic Classification ^[link](https://kartographie.geo.tu-dresden.de/python_datascience_course/04_topic_classification.html)
+  tags:
+    - core
+- id: teach-3
+  period: 2018–2021
+  text: "**Development of Custom Visualization techniques for Big Data.** Lecture and Workshop Series ^[link](https://ad.vgiscience.org/tagmaps-lecture/)"
+  tags:
+    - core
+- id: teach-4
+  period: "2018"
+  text: "**Workshop on “Tag & Emoji Maps”**, Leibniz-Institut für Länderkunde (IfL), Leipzig, Germany"
+  tags:
+    - core
+- id: teach-5
+  period: "2015"
+  text: "**Student Workshop on “Tag Maps”**, University of Waterloo, School of Architecture and Workshop at University of Toronto, Canada"
+  tags:
+    - core
+- id: teach-6
+  period: 2007–2008
+  text: "**Collaboration project “Community of Practice on E-Learning”** (CooPEL), TU Dresden"
+  tags:
+    - core
+- id: teach-7
+  period: 2005–2008
+  text: "**Computer Courses, Introduction to Spatial Modeling and GIS**, Landscape Architecture, TU Dresden"
+  tags:
+    - core
+- id: teach-8
+  period: 2007–2019
+  text: TU Dresden University Sports Centre, teaching beginner and advanced courses
+  tags:
+    - audit-only

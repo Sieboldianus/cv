@@ -1,0 +1,30 @@
+- id: appt-0
+  institution: Leibniz Institute of Ecological Urban and Regional Development
+  location: Dresden, Germany
+  department: null
+  roles:
+  - period: 2024–present
+    title: Senior Scientist (tenured), Research Data Centre (IOER FDZ) & Transformative Capacities (FB T)
+- id: appt-1
+  institution: Technische Universität Dresden
+  location: Germany
+  department: Cartographic Communication, Faculty of Environmental Sciences
+  roles:
+  - period: 2017–2023
+    title: Research Associate
+- id: appt-2
+  institution: University of California, Berkeley
+  location: USA
+  department: Department of Landscape Architecture and Environmental Planning, College of Environmental Design
+  roles:
+  - period: 2011–2012
+    title: International Research Scholar
+- id: appt-3
+  institution: Technische Universität Dresden
+  location: Germany
+  department: Department of Landscape Architecture & Environmental Planning, Faculty of Architecture
+  roles:
+  - period: 2010–2017
+    title: Research Associate
+  - period: 2004–2008
+    title: Teaching & Research Assistant

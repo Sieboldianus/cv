@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ cv.profile.name }} — Curriculum Vitae</title>
+  <style>
+    :root { --text: #1a1a1a; --muted: #666; --link: #1e549f; --rule: #bbb; }
+    body { font-family: "EB Garamond", Georgia, serif; color: var(--text); max-width: 820px; margin: 2.5rem auto; padding: 0 1.25rem; line-height: 1.45; font-size: 1.08rem; }
+    header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
+    .cv-badge { background: #e4e5e8; color: #fff; font-weight: 700; font-size: 2rem; padding: 0.4rem 0.9rem; letter-spacing: 0.08em; }
+    h1 { font-size: 1.4rem; letter-spacing: 0.04em; margin: 0 0 0.2rem; text-transform: uppercase; }
+    h2 { font-size: 1.15rem; text-transform: uppercase; margin: 2.2rem 0 0.7rem; }
+    h3 { font-size: 0.95rem; text-transform: uppercase; border-bottom: 1px dotted var(--rule); padding-bottom: 0.2rem; margin: 1.4rem 0 0.6rem; }
+    h3 span { text-transform: none; font-weight: 400; }
+    a { color: var(--link); }
+    ul { margin: 0.3rem 0; padding-left: 1.2rem; }
+    .toolbar { font-size: 0.92rem; color: var(--muted); border-bottom: 1px solid #eee; padding-bottom: 0.8rem; margin-bottom: 1.8rem; }
+    .contact-grid { display: grid; grid-template-columns: 3.2rem 1fr; gap: 0.15rem 0.6rem; margin-top: 0.8rem; }
+    .row { display: grid; grid-template-columns: 7rem 1fr; gap: 0.4rem 1.2rem; margin-bottom: 0.65rem; }
+    .row-3 { grid-template-columns: 7rem 1fr auto; }
+    .row-wide { grid-template-columns: 12.5rem 1fr; }
+    .year { color: var(--muted); font-variant-numeric: tabular-nums; }
+    .amount { font-variant-numeric: tabular-nums; white-space: nowrap; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.92rem; color: var(--muted); }
+    footer .closing-main, footer .closing-note { color: var(--text); }
+    @media (max-width: 640px) { .row, .row-3, .row-wide { grid-template-columns: 1fr; gap: 0.15rem; } }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    View: <strong>{{ "Audit Log" if cv.meta.view == "audit" else "CV" }}</strong> ·
+    <a href="cv_alexanderdunkel.pdf">PDF</a> ·
+    <a href="cv_alexanderdunkel_audit.pdf">Full Audit PDF</a> ·
+    {% if cv.meta.view == "production" %}<a href="cv_audit.html">Switch to Audit Log</a>{% else %}<a href="cv.html">Switch to CV</a>{% endif %} ·
+    <a href="/">Home</a>
+  </div>
+  <header>
+    <div>
+      <h1>{{ cv.profile.name }}</h1>
+      <div>{{ cv.profile.degrees }}</div>
+      <p><strong>{{ cv.profile.role }}</strong><br>{{ cv.profile.affiliation_line1 }}<br>{{ cv.profile.affiliation_line2 }}</p>
+      <div class="contact-grid">
+        <div>Mail:</div><div>{{ cv.profile.emails | join("<br>") }}</div>
+        <div>Web:</div><div><a href="https://{{ cv.profile.web }}">{{ cv.profile.web }}</a></div>
+        <div>P:</div><div>{{ cv.profile.phone }}</div>
+        {% if cv.profile.orcid %}<div>ORCID:</div><div><a href="https://orcid.org/{{ cv.profile.orcid }}">{{ cv.profile.orcid }}</a></div>{% endif %}
+      </div>
+    </div>
+    <div class="cv-badge" aria-hidden="true">CV</div>
+  </header>
+
+  <h2>01 Education</h2>
+  {% for e in cv.education %}<div class="row"><div class="year">{{ e.period }}</div><div><strong>{{ e.institution }}</strong>, {{ e.country }}<br>{{ e.details | rich }}</div></div>{% endfor %}
+
+  <h2>02 Academic Appointments</h2>
+  {% for inst in cv.appointments %}
+    <p><strong>{{ inst.institution }}</strong>, {{ inst.location }}{% if inst.department %}<br>{{ inst.department }}{% endif %}</p>
+    {% for r in inst.roles %}<div class="row"><div class="year">{{ r.period }}</div><div>{{ r.title | rich }}</div></div>{% endfor %}
+  {% endfor %}
+
+  <h2>03 Professional Experience</h2>
+  {% for e in cv.experience %}<div class="row"><div class="year">{{ e.period }}</div><div><strong>{{ e.organization }}</strong>, {{ e.location }}</div></div>{% endfor %}
+
+  <h2>04 Scholarly Work</h2>
+  <h3>Peer Reviewed <span>(first-authored)</span></h3>
+  {% for p in cv.publications.peer_reviewed %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
+  <h3>Articles &amp; Conference Papers <span>(co-authored)</span></h3>
+  {% for p in cv.publications.coauthored %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
+  <h3>Monographs, Book Chapters &amp; Articles</h3>
+  {% for p in cv.publications.monographs %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
+  <h3>Data Publications</h3>
+  {% for p in cv.publications.data %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
+  <h3>Invited Lectures, Presentations, Symposia</h3>
+  {% for t in cv.talks %}<div class="row"><div class="year">{{ t.year }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
+
+  <h2>05 Teaching</h2>
+  <h3>Lectures and Workshops</h3>
+  {% for t in cv.teaching %}<div class="row"><div class="year">{{ t.period }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
+  <h3>Thesis Supervision</h3>
+  {% for t in cv.theses %}<div class="row"><div class="year">{{ t.period }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
+  <h3>Review and Committee Work</h3>
+  {% for s in cv.service.review_committee %}<div class="row"><div class="year">{{ s.period }}</div><div>{{ s.text | rich }}</div></div>{% endfor %}
+  <h3>Continuing Education</h3>
+  {% for s in cv.service.continuing_education %}<div class="row"><div class="year">{{ s.period }}</div><div>{{ s.text | rich }}</div></div>{% endfor %}
+
+  <h2>06 Projects, Grants and Recognition</h2>
+  <h3>Project Application / Grants</h3>
+  {% for g in cv.grants.awarded %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}
+  {% if cv.grants.pending %}<p>Applications currently being written or submitted:</p>{% for g in cv.grants.pending %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}{% endif %}
+  {% if cv.grants.declined %}<p>Declined Grants:</p>{% for g in cv.grants.declined %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}{% endif %}
+  {% if cv.grants.phd_projects %}<p>Project Work (PhD-phase):</p>{% for g in cv.grants.phd_projects %}<div class="row"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div></div>{% endfor %}{% endif %}
+  <h3>Fellowships and Awards</h3>
+  {% for a in cv.awards %}<div class="row"><div class="year">{{ a.year }}</div><div>{{ a.text | rich }}</div></div>{% endfor %}
+  <h3>Freelance &amp; Contract Work, Volunteering</h3>
+  {% for f in cv.freelance %}<div class="row"><div class="year">{{ f.period }}</div><div>{{ f.text | rich }}</div></div>{% endfor %}
+  <h3>Magazine / Media Coverage, Outreach</h3>
+  {% for m in cv.media %}<div class="row"><div class="year">{{ m.year }}</div><div>{{ m.text | rich }}</div></div>{% endfor %}
+
+  <h2>07 Open Source and Technology</h2>
+  <h3>Projects, Packages and Frameworks</h3>
+  {% for s in cv.software %}<div class="row row-wide"><div><a href="{{ s.url }}">{{ s.label }}</a></div><div>{{ s.description | rich }}</div></div>{% endfor %}
+
+  <footer>
+    <p class="closing-main">{{ cv.profile.closing_text | rich }}</p>
+    {% if cv.meta.closing_note %}<p class="closing-note">{{ cv.meta.closing_note | rich }}</p>{% endif %}
+    <p>
+      Last update: {{ cv.meta.last_update }}
+      {% if cv.meta.commit_sha %} | <a href="https://github.com/Sieboldianus/cv/commit/{{ cv.meta.commit_sha }}">#{{ cv.meta.commit_sha }}</a>{% endif %}
+    </p>
+  </footer>
+</body>
+</html>

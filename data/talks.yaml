@@ -1,0 +1,132 @@
+- id: talk-habil-pres-2026
+  year: '2026'
+  text: '**“Geovisual Analytics for Democratic Resilience: Methodological Frontiers in Measuring Social Cohesion”**, Habilitation Scientific Trial Presentation, TU Dresden. DOI: [10.5281/zenodo.23665194](https://doi.org/10.5281/zenodo.23665194) ^[slides](https://kartographie.geo.tu-dresden.de/ad/social-cohesion/)'
+  tags:
+  - core
+  - habilitation
+- id: talk-habil-lect-2026
+  year: '2026'
+  text: '**“Principles of Good Scientific Practice in Geoinformatics: From Data Management to Reproducible Code”**, Habilitation Scientific Trial Lecture, TU Dresden. DOI: [10.5281/zenodo.23335010](https://doi.org/10.5281/zenodo.23335010) ^[slides](https://kartographie.geo.tu-dresden.de/ad/reproducible-geoinformatics/)'
+  tags:
+  - core
+  - habilitation
+- id: talk-0
+  year: '2026'
+  text: '**“Sustainability Transformation HaCLAthon: A Collaborative, Long-term, and Asynchronous Living Book Experiment”**, Concept, Organization & Chair, IOER Conference 2026, Dresden ^[platform](https://hack.conference.ioer.info/) ^[slides](https://slides.ad.ioer.info/haclathon-presentation/) ^[code](https://github.com/ioer-dresden/ioer-conference-2026-haclathon)'
+  tags:
+  - core
+- id: talk-1
+  year: '2026'
+  text: '**“Responsible Geo-Social Data for Measuring Social Cohesion: Privacy-Preserving Infrastructures, Behavioral Signals, and Synthetic Modeling”**, Computational Social Science (CSS) Workshop, Leibniz Institute of Ecological Urban and Regional Development (IOER), Dresden ^[slides](https://slides.ad.ioer.info/css_social_cohesion/) ^[post](https://ad.vgiscience.org/links/posts/2026-09-22-css-slides/)'
+  tags:
+  - core
+- id: talk-2
+  year: '2026'
+  text: '**“Who Owns the View? Corporate Sovereignty, Filter Bubbles, and the Struggle for Spatial Agency”**, Presentation, Leibniz-Lab Workshop “Umbrüche und Transformationen”, Leipzig ^[link](https://slides.ad.ioer.info/who_owns_the_view/)'
+  tags:
+  - core
+- id: talk-3
+  year: '2025'
+  text: '**IOER FDZ Carto-Lab Docker - An RDM Infrastructure for Transparent, Open, and Reproducible Spatial Data Science (Poster)**, 2nd Conference on Research Data Infrastructure 2025 (CoRDI), Aachen, DOI: [10.5281/zenodo.17083789](https://doi.org/10.5281/zenodo.17083789) ^[web](https://cartolab.fdz.ioer.info/) ^[github](https://github.com/ioer-dresden/carto-lab-docker)'
+  tags:
+  - core
+- id: talk-4
+  year: '2025'
+  text: '**The resilient PhD/PostDoc: Building Habits to Combat Information Fatigue.** IOER Internal: Leibniz PostDocs & DLGS PhDs. ^[link](https://alexanderdunkel.com/slides/resilient-habits/)'
+  tags:
+  - core
+- id: talk-5
+  year: '2024'
+  text: '**“Smart governance: Geosocial media data streams as urban social, ecological and technological systems (SETS)”**, IOER Conference 2024, Hygiene-Museum Dresden ^[link](https://slides.ad.ioer.info/ioerconference_geosocial/)'
+  tags:
+  - core
+- id: talk-6
+  year: '2023'
+  text: '**“Estimating the temporality of landscape scenic resources from user-contributed geodata.”**, presentation (in-person), ASLA Visual Stewardship Conference 2023, Argonne National Laboratory, Lemont, USA ^[link](https://kartographie.geo.tu-dresden.de/ad/vrsc-2023-slides/?slideNumber=true#/)'
+  tags:
+  - core
+- id: talk-7
+  year: '2023'
+  text: '**“Visuelle Analyse von Geosocial Media Daten mit Jupyter Lab”**, CartoHack #16, Deutsche Gesellschaft für Kartographie e.V. ^[link](https://visualisierung.dgfk.net/de/events/cartohack/16-jupyter/)'
+  tags:
+  - core
+- id: talk-8
+  year: '2022'
+  text: '**VGI and Smart Cities Workshop & Poster (EVA-VGI) at Smart Country Convention (SCCON)**, Berlin ^[link](https://www.vgiscience.org/2022/10/20/sccon.html)'
+  tags:
+  - core
+- id: talk-9
+  year: '2022'
+  text: '**“Nutzung von Social Media für die partizipative, grüne Stadtentwicklung”** (Online), Stadt Chemnitz; with B. Hoffmann (Amt für Informationsverarbeitung); C. Beschow, S. Böhme (Stadtplanungsamt); F. Etterer (Grünflächenamt) ^[link](https://ad.vgiscience.org/meeting_chemnitz/#/)'
+  tags:
+  - core
+- id: talk-10
+  year: '2021'
+  text: '**“Decoding the perceived City”,** Trial (test) lecture as part of the interview process for tenure track at UVA, Virginia, for a joint appointment at the School of Engineering and Applied Science, the School of Data Science and the School of Architecture. ^[link](https://ad.vgiscience.org/decoding-the-perceived-city/)'
+  tags:
+  - core
+- id: talk-11
+  year: '2020'
+  text: '**“HyperLogLog for Real Time LBSM Visual Analytics. A solution to the count distinct problem ** ***and*** ** privacy?**”, presentation (Online), EvaVGI II & Remote Sensing Image Analysis, TU Berlin ^[link](https://ad.vgiscience.org/lbsn-hll-slides/#/)'
+  tags:
+  - core
+- id: talk-12
+  year: '2019'
+  text: '**“Visualizing the perceived City from crowdsourced Social Media data”,** Seminar “Decoding the City”, Faculty of Architecture, TU Dresden ^[link](https://ad.vgiscience.org/decoding-the-city)'
+  tags:
+  - core
+- id: talk-13
+  year: '2019'
+  text: '**“Social Media Visualizations and Monitoring”**, presentation, Berchtesgaden National Park, workshop on park issues from mass invasion through the global spread of information on Social Media ^[link](https://ad.vgiscience.org/nationalpark-berchtesgaden/)'
+  tags:
+  - core
+- id: talk-14
+  year: '2019'
+  text: '**“theplink-docker: A spatial interface to support city planning and local community discourse**”, Community Workshop, Waynesboro, USA ^[link](https://mainstreet21.vgiscience.org/waynesboro-workshop/)'
+  tags:
+  - core
+- id: talk-15
+  year: '2019'
+  text: '**DFG-Outreach “Research in Germany”**, AGU Fall Meeting, San Francisco, USA'
+  tags:
+  - core
+- id: talk-16
+  year: '2018'
+  text: '**“Visualizing peoples’ perceptual responses to space through crowdsourced spatial photo content”**, presentation and workshop, Data Dialogue 9, School of Architecture, University of Virginia, USA'
+  tags:
+  - core
+- id: talk-17
+  year: '2018'
+  text: '**“Taking into account the public’s view in landscape and urban planning: Big Data Potentials and Challenges”**, Workshop on visual communication methods in Regional Planning, Kassel'
+  tags:
+  - core
+- id: talk-18
+  year: '2018'
+  text: '**“Berücksichtigung der öffentlichen Wahrnehmung in der Raumentwicklung – Chancen durch nutzergenerierte Daten”**, 10. Dresdner Flächennutzungssymposium, IOER, Dresden'
+  tags:
+  - core
+- id: talk-19
+  year: '2017'
+  text: '**“Identifying Perceived Characteristics and the Collective Attribution of Values and Meaning from Social Media”**, presentation, Nexus Conference (Dresden)'
+  tags:
+  - core
+- id: talk-20
+  year: '2017'
+  text: '**“Visualizing VGI for application to the fields of landscape and urban planning”**, VGIscience Summer School (TU Dresden)'
+  tags:
+  - core
+- id: talk-21
+  year: '2015'
+  text: '**“On Empathy and Data : crowdsourced mental maps”** presentation, with Dr. M. El Khafif (DATAlab), Toronto, Canada'
+  tags:
+  - core
+- id: talk-22
+  year: '2012'
+  text: '**“Open Source Cartography: Mapping Patterns of Crowd Sourced Data”**, Guest Lecture, Panel Discussion and Exhibition, Department of Architecture URBANlab, California College of the Arts (CCA), San Francisco, USA'
+  tags:
+  - core
+- id: talk-23
+  year: '2011'
+  text: '**“Network-Landscapes: New control options for Landscape Architecture and Environmental Planning through the use of internet-based, international, locative media data streams”**, Guest Lecture, Fall 2011 Colloquium, Department of Landscape Architecture & Environmental Planning, UC Berkeley, USA'
+  tags:
+  - core

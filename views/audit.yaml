@@ -1,0 +1,9 @@
+name: audit
+include_all: true
+show_declined_grants: true
+show_phd_project_work: true
+closing_note: >
+  This is the complete, unredacted academic audit log. A curated summary version
+  for broader circulation is available at
+  [alexanderdunkel.com/cv_alexanderdunkel.pdf](https://www.alexanderdunkel.com/cv_alexanderdunkel.pdf).
+  Source and reproducible Typst/CI pipeline: [github.com/Sieboldianus/cv](https://github.com/Sieboldianus/cv).

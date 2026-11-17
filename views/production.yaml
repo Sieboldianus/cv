@@ -1,0 +1,36 @@
+name: production
+exclude_tags:
+  - audit-only
+show_declined_grants: false
+show_phd_project_work: false
+
+rules:
+  theses:
+    keep_where:
+      field: level
+      in: [phd]
+    aggregate_remaining:
+      period: "{min_year}–{max_year}"
+      template: >
+        **Master & Diploma Supervision:** Supervised and co-supervised {count} Master
+        and Diploma theses ({min_year}–{max_year}) at {institutions_list} on geosocial
+        media analytics, generative AI cartography, LLMs, and privacy-preserving VGI.
+
+  freelance:
+    keep_where:
+      field: highlight
+      equals: true
+    aggregate_remaining:
+      period: "{min_year}–{max_year}"
+      template: >
+        **Selected Consulting & Exhibitions ({count} projects):** GIS/social media data
+        analyses, exhibition graphics, and design competition contributions (incl. PSY:PLAN GbR,
+        Diller Scofidio + Renfro / Field Operations, WEST 8, DATAlab Toronto).
+
+closing_note: >
+  This is the curated version of my CV. I have omitted or summarized minor consulting
+  contracts, individual Master/Diploma theses, PhD-phase project work, and unfunded
+  grant proposals here. The complete, unredacted audit version is published for
+  transparency at
+  [alexanderdunkel.com/cv_alexanderdunkel_audit.pdf](https://www.alexanderdunkel.com/cv_alexanderdunkel_audit.pdf).
+  Source and reproducible Typst/CI pipeline: [github.com/Sieboldianus/cv](https://github.com/Sieboldianus/cv).

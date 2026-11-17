@@ -1,0 +1,35 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  GIT_DEPTH: "0"
+
+build:
+  stage: build
+  image: registry.forst.alexanderdunkel.com/tools/typst-cv:latest
+  tags:
+    - dind-runner
+  script:
+    - python3 scripts/build.py
+  artifacts:
+    paths:
+      - site/
+    expire_in: 1 week
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "master"'
+
+deploy:
+  stage: deploy
+  image: registry.forst.alexanderdunkel.com/tools/typst-cv:latest
+  tags:
+    - dind-runner
+  before_script:
+    - eval $(ssh-agent -s)
+    - echo "${SSH_PRIVKEY}" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - rsync -avu -zz -e 'ssh -p 2244' --no-perms --omit-dir-times site/ "${PRODUCTION_DESTINATION}/ad/"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "master"'

@@ -1,0 +1,102 @@
+awarded:
+  - id: grant-awarded-0
+    period: 2024–2025
+    text: "**Education and training materials for integrating NFDI Land GBIF and IOER Monitor data**. URL: [training.fdz.ioer.info](https://training.fdz.ioer.info), NFDI4Biodiversity funding phase II, Applicants: Syrbe, R.-U., Dworczyk, C. A., Krüger, T., Dunkel, A., Behnisch, M. (IOER)"
+    amount: €15,000
+    status: awarded
+    tags:
+      - awarded
+  - id: grant-awarded-1
+    period: 2020–2023
+    text: "**Volunteered Geographic Information - Interpretation, Visualisation and Social Computing [EVA VGI II]: Geovisual analysis of VGI for understanding people’s behaviour in relation to multi-faceted context**, German Research Foundation Priority Programme (SPP 1894), with Burghardt, D., and Hauthal, E. (TUD)"
+    amount: €264,355
+    status: awarded
+    tags:
+      - awarded
+  - id: grant-awarded-2
+    period: "2019"
+    text: "**Mapping The Geospatial Image Of Waynesboro** (MainStreet21 RCN NSF seed grant), with Huang, G., El Khafif, M., Juday, L. (UVA)"
+    amount: $6,400
+    status: awarded
+    tags:
+      - awarded
+  - id: grant-awarded-3
+    period: "2019"
+    text: |-
+      **Green City – Information on and Navigation to urban green spaces – Data collection, Service infrastructure for App “meinGrün”** (transl.), with Burghardt, D. (TUD) and the Leibniz Institute of Ecological Urban and Regional Development (Dresden)
+    amount: €163,553
+    status: awarded
+    tags:
+      - awarded
+pending:
+  - id: grant-pending-0
+    period: 2024–present
+    text: "“Assessment of social cohesion of neighbourhoods, districts and regions: A German information system for integrating geo-social data in urban decision making – GEO-S(O)IS”, DFG Antrag im Förderprogramm “Wissenschaftliche Literaturversorgungs- und Informationssysteme” (LIS), Jan Goebel (DIW), Alexander Dunkel (IOER FB T & FDZ), Odile Sauzet (Universität Bielefeld, Statistics and Data Analysis)"
+    amount: €1,286,152
+    status: pending
+    tags:
+      - pending
+declined:
+  - id: grant-declined-0
+    period: "2023"
+    text: "“Digitaler Dialog zu lokaler Klimawandelanpassung für mehr öffentliches Engagement (#Klimadialog)”, BMBF Funding, “Wissenschaftskommunikation”, Lead: Universität Kassel (Umweltmeteorologie), Partners: TU-Dresden (Kartographie), Stadt Kassel (Umweltplanung), Universität Kassel (Interdisziplinäre Arbeitsgruppe “Climate Thinking”)"
+    amount: €751,079
+    status: declined
+    tags:
+      - declined
+  - id: grant-declined-1
+    period: "2023"
+    text: “Privacy-compliant geosocial data stream transformation”, 2nd call for NFDI4Earth Pilots (Lead, Compilation)
+    amount: €71,410
+    status: declined
+    tags:
+      - declined
+  - id: grant-declined-2
+    period: "2022"
+    text: "“#4K: Kreative Kommunikation für Klima & Kultur”, BMBF Funding “Die digitale Kommune: Interaktive, partizipative und datengetriebene Planungsprozesse unterstützen” (Lead Coordination, Compilation), Partners: Universität Kassel (Umweltmeteorologie), Stadt Kassel (Umweltplanung), Zebralog GmbH, YOUSE GmbH, PSY:PLAN GbR"
+    amount: €1,470,556
+    status: declined
+    tags:
+      - declined
+  - id: grant-declined-3
+    period: "2022"
+    text: |-
+      “iTRANSMIT: Interaktive themen- und raumbezogene, anonyme
+      Nutzerstatistiken sozialer Medien als Informationsgrundlage für Tagesgastmonitoring”; Associated Partners (LOI): Bonn, Amt für Wirtschaftsförderung; Chemnitz, Dezernat 6, Stadtentwicklung und Bau
+    amount: €97,727
+    status: declined
+    tags:
+      - declined
+  - id: grant-declined-4
+    period: "2021"
+    text: "We Are Martinsville [WAM]: Leveraging Mobile Gaming to Increase Community Engagement and Improve Health Outcomes (NSF SCC-IRG Track 1), with El Khafif, M., Wibberly, K., Stokes, B., Jain, S., and Nguyen, N. (UVA)"
+    amount: $113,455
+    status: declined
+    tags:
+      - declined
+phd_projects:
+  - id: phdproj-0
+    period: "2016"
+    text: F+E “Den Landschaftswandel gestalten”, Entwicklung und Gestaltung der Kulturlandschaften Baden-Württembergs am Beispiel der Region Ostwürttemberg. GIS-Verarbeitung, Aggregation d. EEG-Stammdaten (BW), Social-Media Daten
+    tags:
+      - phd-project
+  - id: phdproj-1
+    period: 2012–2014
+    text: F+E “Den Landschaftswandel gestalten”, Potentiale der Landschafts- und Raumplanung zur modellhaften Entwicklung und Gestaltung von Kulturlandschaften vor dem Hintergrund aktueller Transformationsprozesse (UFOPLAN 2012)
+    tags:
+      - phd-project
+  - id: phdproj-2
+    period: "2012"
+    text: Strategische Umweltprüfung (SUP) Landesentwicklungsplan 2013 Sachsen, GIS-Verarbeitung, Text, Regionalisierung WETTREG
+    tags:
+      - phd-project
+  - id: phdproj-3
+    period: "2014"
+    text: Kulturlandschaftsprojekt Mittelsachsen, GIS-Verarbeitung, Bericht
+    tags:
+      - phd-project
+  - id: phdproj-4
+    period: 2010–2013, 2016
+    text: Strategische Umweltprüfung (SUP) Flächennutzungsplan Stadt Dresden, GIS-Verarbeitung, Biotopkartierung und Prüfung geplanter Bauflächen, Bericht
+    tags:
+      - phd-project

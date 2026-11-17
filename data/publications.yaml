@@ -1,0 +1,201 @@
+peer_reviewed:
+  - id: pr-0
+    year: "2025"
+    citation: "**Dunkel, A., Schmidt, C., Wende, W., Nieswand, M. (2025).** *Digitale Spuren in der Landschaft: Ein neuer Blick auf Deutschlands Naturräume durch Soziale Medien.* Landschaft und Natur in Karten. – Naturschutz und Landschaftsplanung (NuL). DOI: [10.1399/NuL.190572](https://doi.org/10.1399/NuL.190572)"
+    tags:
+      - core
+  - id: pr-1
+    year: "2024"
+    citation: "**Dunkel, A., Burghardt, D. (2024).** *Assessing Perceived Landscape Change from Opportunistic Spatiotemporal Occurrence Data.* Special issue: Exploring Multisensory Landscapes: 2023 Visual Resource Stewardship Conference, Land, 13, 1091. DOI: [10.3390/land13071091](https://doi.org/10.3390/land13071091)"
+    tags:
+      - core
+  - id: pr-2
+    year: "2024"
+    citation: "**Dunkel, A., Burghardt, D. & Gugulica, M. (2024).** *Generative Text-to-Image Diffusion for Automated Map Production Based on Geosocial Media Data.* KN J. Cartogr. Geogr. Inf. DOI: [10.1007/s42489-024-00159-9](https://doi.org/10.1007/s42489-024-00159-9)"
+    tags:
+      - core
+  - id: pr-3
+    year: "2023"
+    citation: "**Dunkel, A., Hartmann, M. C., Hauthal, E., Burghardt, D., & Purves, R. S. (2023).** *From sunrise to sunset: Exploring landscape preference through global reactions to ephemeral events captured in georeferenced social media*. PLOS ONE, 18(2), e0280423. DOI: [10.1371/journal.pone.0280423](https://doi.org/10.1371/journal.pone.0280423)"
+    tags:
+      - core
+  - id: pr-4
+    year: "2020"
+    citation: "**Dunkel, A., Löchner, M., & Burghardt, D. (2020).** *Privacy-aware visualization of volunteered geographic information (VGI) to analyze spatial activity: a benchmark implementation*. ISPRS International Journal of Geo-Information, 9(10), 607. DOI: [10.3390/ijgi9100607](https://doi.org/10.3390/ijgi9100607)"
+    tags:
+      - core
+  - id: pr-5
+    year: "2019"
+    citation: |-
+      **Dunkel, A., Andrienko, G., Andrienko, N., Burghardt, D., Hauthal, E., & Purves, R. (2019).**
+      *A conceptual framework for studying collective reactions to events in location-based social media*. International Journal of Geographical Information Science, 33(4), 780–804. DOI: [10.1080/13658816.2018.1546390](https://doi.org/10.1080/13658816.2018.1546390)
+    tags:
+      - core
+  - id: pr-6
+    year: "2015"
+    citation: "**Dunkel, A. (2015).** *Visualizing the perceived environment using crowdsourced photo geodata*. Special Issue: Critical Approaches to Landscape Visualization, Landscape and Urban Planning, 142, 173–186. DOI: [10.1016/j.landurbplan.2015.02.022](https://doi.org/10.1016/j.landurbplan.2015.02.022)"
+    tags:
+      - core
+coauthored:
+  - id: co-0
+    year: "2025"
+    citation: "**Weckmüller, D., Dunkel, A., & Burghardt, D. (2025).** *Embedding-Based Multilingual Semantic Search for Geo-Textual Data in Urban Studies.* Journal of Geovisualization and Spatial Analysis, Springer. DOI: [10.1007/s41651-025-00232-5](https://doi.org/10.1007/s41651-025-00232-5)"
+    tags:
+      - core
+  - id: co-1
+    year: "2023"
+    citation: "**Weckmüller, D., & Dunkel, A. (2023).** *An application-oriented implementation of hexagonal on-the-fly binning metrics for city-scale georeferenced social media data.* The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLVIII-4/W7-2023, 253–260. DOI: [10.5194/isprs-archives-XLVIII-4-W7-2023-253-2023](https://doi.org/10.5194/isprs-archives-XLVIII-4-W7-2023-253-2023)"
+    tags:
+      - core
+  - id: co-2
+    year: "2022"
+    citation: "**Weckmüller, D., & Dunkel, A. (2022).** *Developing a privacy-aware map-based cross-platform social media dashboard for municipal decision-making.* The International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLVIII-4/W1-2022, 545–552. DOI: [10.5194/isprs-archives-XLVIII-4-W1-2022-545-2022](https://doi.org/10.5194/isprs-archives-XLVIII-4-W1-2022-545-2022)"
+    tags:
+      - core
+  - id: co-3
+    year: "2021"
+    citation: "**Hecht, R., Artmann, M., Brzoska, P., Burghardt, D., Cakir, S., Dunkel, A., Gröbe, M., Gugulica, M., Krellenberg, K., Kreutzarek, N., Lautenbach, S., Ludwig, C., Lümkemann, D., Meinel, G., Schorcht, M., Sonnenbichler, A., Stanley, C., Tenikl, J., Wurm, M., & Zipf, A. (2021).** *A web app to generate and disseminate new knowledge on urban green space qualities and their accessibility*. ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, VIII-4/W1-2021, 65–72. DOI: [10.5194/isprs-annals-VIII-4-W1-2021-65-2021](https://doi.org/10.5194/isprs-annals-VIII-4-W1-2021-65-2021)"
+    tags:
+      - core
+  - id: co-4
+    year: "2021"
+    citation: "**Hauthal, E., Dunkel, A., & Burghardt, D. (2021).** *The Representation of Spatial Context by Emojis within Location based Social Media.* Abstracts of the ICA, 3, 1–1. DOI: [10.5194/ica-abs-3-102-2021](https://doi.org/10.5194/ica-abs-3-102-2021)"
+    tags:
+      - core
+  - id: co-5
+    year: "2021"
+    citation: "**Hauthal, E., Dunkel, A., & Burghardt, D. (2021).** *Emojis as Contextual Indicants in Location-Based Social Media Posts.* ISPRS International Journal of Geo-Information, 10(6), 407. DOI: [10.3390/ijgi10060407](https://doi.org/10.3390/ijgi10060407)"
+    tags:
+      - core
+  - id: co-6
+    year: "2020"
+    citation: "**Löchner, M., Fathi, R., Schmid, D., Dunkel, A., Burghardt, D., Fiedrich, F., & Koch, S. (2020).** *Case Study on Privacy-Aware Social Media Data Processing in Disaster Management.* ISPRS International Journal of Geo-Information, 9(12), 709. DOI: [10.3390/ijgi9120709](https://doi.org/10.3390/ijgi9120709)"
+    tags:
+      - core
+  - id: co-7
+    year: "2020"
+    citation: "**Gröbe, M., Dunkel, A., & Burghardt, D. (2020).** *A new web map for the MeinGrün app.* Abstracts of the ICA, 2, 1–2. DOI: [10.5194/ica-abs-2-8-2020](https://doi.org/10.5194/ica-abs-2-8-2020)"
+    tags:
+      - core
+  - id: co-8
+    year: "2019"
+    citation: "**Löchner, M., Dunkel, A., & Burghardt, D. (2019).** *Protecting privacy using HyperLogLog to process data from Location Based Social Networks.* In LESSON 2019—1st International Workshop on Legal and Ethical Issues in Crowdsourced Geographic Information. ^[link](https://www.cs.nuim.ie/~pmooney/lesson2019/)"
+    tags:
+      - core
+  - id: co-9
+    year: "2019"
+    citation: "**Andrienko, N., Andrienko, G., Chen, S., Burghardt, D., Dunkel, A., & Purves, R. (2019).** *Geovisual analysis of VGI for understanding people’s behaviour in relation to multifaceted context.* Abstracts of the ICA, 1, 1–2. DOI: [10.5194/ica-abs-1-10-2019](https://doi.org/10.5194/ica-abs-1-10-2019)"
+    tags:
+      - core
+  - id: co-10
+    year: "2019"
+    citation: "**Hauthal, E., Burghardt, D., & Dunkel, A. (2019).** *Analyzing and Visualizing Emotional Reactions Expressed by Emojis in Location-Based Social Media.* ISPRS International Journal of Geo-Information, 8(3), 113. DOI: [10.3390/ijgi8030113](https://doi.org/10.3390/ijgi8030113)"
+    tags:
+      - core
+  - id: co-11
+    year: "2018"
+    citation: "**Löchner, M., Dunkel, A., & Burghardt, D. (2018).** *A privacy-aware model to process data from location-based social media.* VGI Geovisual Analytics Workshop, colocated with BDVA 2018. Konstanz, Germany, 19. Oct. 2018.* *URN: [urn:nbn:de:bsz:352-2-1tc0wl382uqkr0](https://nbn-resolving.de/urn:nbn:de:bsz:352-2-1tc0wl382uqkr0)"
+    tags:
+      - core
+monographs:
+  - id: mono-0
+    year: "2026"
+    citation: "**Dunkel, A. (2026).** *Geovisualizing Collective Perception: Integrating Opportunistic Data into the Planning Information Cycle*, Habilitation thesis, Faculty of Environmental Sciences, TU Dresden. [Monograph manuscript in preparation]"
+    tags:
+      - core
+  - id: mono-1
+    year: "2023"
+    citation: "**Dunkel, A. (2023).** *Event inventories: Estimating the temporality of landscape scenic resources from user-contributed geodata*, Conference Proceedings, ASLA Visual Stewardship Conference 2023, Argonne National Laboratory, Lemont, US ^[link](https://experts.esf.edu/esploro/activity/events/2023-Visual-Resource-Stewardship-Conference/1991221460004826?institution=01SUNY_ESF)"
+    tags:
+      - core
+  - id: mono-2
+    year: "2023"
+    citation: "**Burghardt, D., Dunkel, A., Hauthal, E., Shirato, G., Andrienko, N., Andrienko, G., Hartmann, M., & Purves, R. (2023).** *Extraction and Visually Driven Analysis of VGI for Understanding People’s Behavior in Relation to Multi-Faceted Context.* In: Burghardt, D., Demidova, E., Keim, D.A. (eds) Volunteered Geographic Information. Springer, Cham. 241-270. DOI: [10.1007/978-3-031-35374-1_12](https://doi.org/10.1007/978-3-031-35374-1_12)"
+    tags:
+      - core
+  - id: mono-3
+    year: "2021"
+    citation: "**Dunkel, A., Leukefeld, T. (2021).** *Tag-Maps: landschaftliche Wahrnehmung in sozialen Netzwerken am Beispiel der Planungsregion Leipzig-Westsachsen*. Kurzbroschüre: [stadtlandnavi.de](https://fis.tu-dresden.de/portal/files/18084095/Kurzbroschuere_Tag_Maps_Westsachsen_web.pdf)"
+    tags:
+      - core
+  - id: mono-4
+    year: "2021"
+    citation: "**Hecht, R., Brzoska, P., Burghardt, D., Cakir, S., & Dunkel, A., ... (2021).** *Informationen und Navigation zu urbanen Grünflächen in Städten Abschlussbericht und Handbuch zum mFUND-Projekt: MeinGrün*. November. Dresden: IOER, 2021, S.126. ^[pdf](https://meingruen.ioer.info/fileadmin/user_upload/meingruen_sub/files/mFUND_19F2073A_meinGr%C3%BCn_Schlussbericht.pdf)"
+    tags:
+      - core
+  - id: mono-5
+    year: "2020"
+    citation: "**Dunkel, A. (2020).** *Tag Maps in der Landschaftsplanung.* In: Handbuch Methoden Visueller Kommunikation in der Räumlichen Planung, Springer, 127-166, DOI: [10.1007/978-3-658-29862-3_8](https://doi.org/10.1007/978-3-658-29862-3_8)"
+    tags:
+      - core
+  - id: mono-6
+    year: "2016"
+    citation: "**Schmidt, C., Dunkel, A. (2016).** *Den Landschaftswandel gestalten!* *Entwicklung und Gestaltung der Kulturlandschaften Baden-Württembergs am Beispiel der Region Ostwürttemberg.* LUBW Landesanstalt für Umwelt, Messungen und Naturschutz Baden-Württemberg"
+    tags:
+      - core
+  - id: mono-7
+    year: "2016"
+    citation: "**Dunkel, A. (2016).** *Assessing the perceived environment through crowdsourced spatial photo content for application to the fields of landscape and urban planning*. Dissertation. URN: [urn:nbn:de:bsz:14-qucosa-207927](https://nbn-resolving.org/urn:nbn:de:bsz:14-qucosa-207927)"
+    tags:
+      - core
+  - id: mono-8
+    year: "2015"
+    citation: "**Schmidt, C., Dunkel, A., Hanke, R., Lachor, M., Seidler, K., Böttner, S., Gruhl, E. (2015).** *Kulturlandschaftsprojekt Mittelsachsen*. Sachsen, Dresden, 651 p."
+    tags:
+      - core
+  - id: mono-9
+    year: "2014"
+    citation: "**Schmidt, C., Dunkel, A., Hofmann, M., Schneeberger, E. (2014).** *Den Landschaftswandel gestalten! Potentiale der Landschafts- und Raumplanung zur modellhaften Entwicklung und Gestaltung von Kulturlandschaften vor dem Hintergrund aktueller Transformationsprozesse*, Band 2: Regionalplanung und Landschaftsrahmenplanung, Bonn, Bundesamt für Naturschutz (BfN)"
+    tags:
+      - core
+  - id: mono-10
+    year: "2014"
+    citation: "**Schmidt, C., Dunkel, A., Hofmann, M., Schneeberger, E. (2014).** *Den Landschaftswandel gestalten! Potentiale der Landschafts- und Raumplanung zur modellhaften Entwicklung und Gestaltung von Kulturlandschaften vor dem Hintergrund aktueller Transformationsprozesse*, Band 1: Bundesweite Übersichten, Bonn, Bundesamt für Naturschutz (BfN)"
+    tags:
+      - core
+  - id: mono-11
+    year: "2014"
+    citation: "**Schmidt, C., Dunkel, A., Lein, M., Seiche, K. (2014).** *Strategische Umweltprüfung für den Flächennutzungsplan 2015 der Stadt Dresden*, 97 p."
+    tags:
+      - core
+  - id: mono-12
+    year: "2013"
+    citation: "**Schmidt, C., Dunkel, A., Hofmann, M., Lein, M. (2013).** *Strategische Umweltprüfung für den Landesentwicklungsplan 2013 Sachsen (LEP)*, 90 p., Sachsen."
+    tags:
+      - core
+  - id: mono-13
+    year: "2010"
+    citation: "**Dunkel, A. (2010).** *Die Kulturlandschaft der Stadt Bad Schandau und ihrer Umgebung - ein Entwicklungskonzept*. Diploma Thesis, Landscape & Environmental Planning, TU-Dresden."
+    tags:
+      - core
+data:
+  - id: data-0
+    year: "2025"
+    citation: "**Dunkel, A., & Nieswand, M. (2025).** *Replication Package for: Digital Landscape Traces - Locals and Tourists in Germany Map.* Landschaft und Natur in Karten. – Naturschutz und Landschaftsplanung (NuL). DOI: [10.71830/VDMUWW](https://doi.org/10.71830/VDMUWW) ^[web](https://code.ad.ioer.info/digital_traces_map/)"
+    tags:
+      - core
+  - id: data-1
+    year: "2025"
+    citation: "**Dworczyk, C., Dunkel, A., Rafiei, F., Syrbe, R.-U. (2025).** *Replication Package for “Exploring Spatial and Biodiversity Data with Python and JupyterLab”.* ioerDATA Repository. DOI: [10.71830/6ILS40](https://doi.org/10.71830/6ILS40) ^[web](https://training.fdz.ioer.info/)"
+    tags:
+      - core
+  - id: data-2
+    year: "2024"
+    citation: "**Dunkel, A., & Burghardt, D. (2024).** *Supplementary Materials for the Publication “Assessing Perceived Landscape Change from Opportunistic Spatio-Temporal Occurrence Data”.* Opara Data Repository. DOI: [10.25532/OPARA-572](https://doi.org/10.25532/OPARA-572) ^[web](https://code.ad.ioer.info/wip/temporal_landscapes/)"
+    tags:
+      - core
+  - id: data-3
+    year: "2023"
+    citation: "**Dunkel, A., Burghardt, D., Gugulica, M. (2023).** *Supplementary materials for the publication “Generative text-to-image diffusion for automated map production based on geosocial media data”.* Opara Data Repository. DOI: [10.25532/OPARA-253](http://dx.doi.org/10.25532/OPARA-253) ^[web](https://kartographie.geo.tu-dresden.de/ad/wip/mapnik_stablediffusion/html/03_map_processing.html)"
+    tags:
+      - core
+  - id: data-4
+    year: "2023"
+    citation: "**Dunkel, A., Hartmann, M. C., Hauthal, E., Burghardt, D., Purves, R. S. (2023).** *Supplementary materials for the publication “From sunrise to sunset: Exploring landscape preference through global reactions to ephemeral events captured in georeferenced social media”*. Opara Data Repository. DOI: [10.25532/OPARA-200](http://dx.doi.org/10.25532/OPARA-200) ^[web](https://ad.vgiscience.org/sunset-sunrise-paper/01_grid_agg.html)"
+    tags:
+      - core
+  - id: data-5
+    year: "2020"
+    citation: "**Dunkel, A., Löchner, M., Burghardt, D. (2020).** *Supplementary Materials (release v0.1.0) for Privacy-aware visualization of volunteered geographic information (VGI) to analyze spatial activity: A benchmark implementation.* Opara Data Repository. DOI: [10.25532/OPARA-90](http://dx.doi.org/10.25532/OPARA-90) ^[web](https://wwwpub.zih.tu-dresden.de/~s7398234/vis/yfcc/Privacy_test_alex.html) ^[github](https://github.com/Sieboldianus/yfcc_gridagg)"
+    tags:
+      - core

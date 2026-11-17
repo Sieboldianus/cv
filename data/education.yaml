@@ -1,0 +1,31 @@
+- id: edu-habil
+  period: 2024–2026
+  institution: Technische Universität Dresden
+  country: Germany
+  details: >-
+    Habilitation (completed Oct 15, 2026; *venia legendi* in Geovisual Analytics),
+    Faculty of Environmental Sciences; *Geovisualizing Collective Perception:
+    Integrating Opportunistic Data into the Planning Information Cycle*
+  tags:
+    - core
+- id: edu-1
+  period: 2010–2016
+  institution: Technische Universität Dresden
+  country: Germany
+  details: Doctorate of Engineering in Landscape & Urban Planning, with highest honors (summa cum laude)
+  tags:
+    - core
+- id: edu-2
+  period: 2004–2010
+  institution: Technische Universität Dresden
+  country: Germany
+  details: Landscape Architecture, Dipl.-Ing., MLA equiv.
+  tags:
+    - core
+- id: edu-3
+  period: "2004"
+  institution: Technische Universität Cottbus
+  country: Germany
+  details: "Design & Media Technology"
+  tags:
+    - core

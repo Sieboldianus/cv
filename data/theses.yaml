@@ -1,0 +1,71 @@
+- id: thesis-0
+  period: 2024–present
+  level: phd
+  institution: TU Dresden
+  text: "**Second Advisor for PhD thesis Dominik Weckmüller**, Doctoral Candidate at the Institute of Cartography, TU Dresden."
+  tags:
+    - phd
+- id: thesis-1
+  period: 2019–2023
+  level: phd
+  institution: TU Dresden
+  text: "**Second Advisor for PhD thesis** Marc Löchner, “Privacy-aware social media data processing”"
+  tags:
+    - phd
+- id: thesis-2
+  period: "2025"
+  level: master
+  institution: IOER & TU Dresden
+  text: "**Master thesis Ridwan Waheed**, “Large language models (LLMs) as a classification component for mapping similarities in spatial context and meaning from geo-social media and volunteered geographic information (VGI).”, IOER & Faculty of Environmental Sciences, Institute of Cartography, TU Dresden."
+  tags:
+    - master
+- id: thesis-3
+  period: "2023"
+  level: master
+  institution: TU Dresden
+  text: "**Master thesis Malte Stüllein**, “Generative AI for map making using Stable Diffusion and geosocial data”, Faculty of Environmental Sciences, Institute of Cartography, TU Dresden."
+  tags:
+    - master
+- id: thesis-4
+  period: "2021"
+  level: master
+  institution: University of Bonn
+  text: "**Master thesis Dominik Weckmüller**, “Good Governance goes Smart - Social Media data supporting Evidence-Based Municipal Policies”, Department of Geography, University of Bonn."
+  tags:
+    - master
+- id: thesis-5
+  period: "2021"
+  level: master
+  institution: TU Dresden
+  text: "**Master thesis Junru Lin,** “Extraction of places of interest from Volunteered Geographic Information”, Faculty of Environmental Sciences, Institute of Cartography, TU Dresden."
+  tags:
+    - master
+- id: thesis-6
+  period: "2020"
+  level: master
+  institution: TU Dresden
+  text: |-
+    **Master thesis Jack Stephan**, “Privacy Aware Analysis of Spatial Social Media Data”, Faculty of
+    Environmental Sciences, Institute of Cartography, TU Dresden.
+  tags:
+    - master
+- id: thesis-7
+  period: "2020"
+  level: diploma
+  institution: TU Dresden
+  text: "**Diploma thesis Claudia Tautenhahn**, “Mass Invasion: Social Media impact on landscape perception and selected vantage points in Europe” (transl.), Institute of Landscape Architecture, TU Dresden."
+  tags:
+    - diploma
+- id: thesis-8
+  period: "2019"
+  level: master
+  institution: TU Dresden
+  text: "**Master thesis Jan Kolditz**, “User-generated geographic content supporting geo-visual analysis of tourist behavior” (transl.), Faculty of Environmental Sciences, Institute of Cartography, TU Dresden."
+  tags:
+    - master
+- id: thesis-samaniego-cruz-2026
+  period: "2026"
+  level: master
+  institution: "TU Dresden"
+  text: "**Master thesis Jennyfer Patricia Samaniego Cruz**, “Persuasive Design on Thematic Maps with Generative Artificial Intelligence”, Cartography M.Sc. (TUM / TUD / TUW / UT), Institute of Cartography, TU Dresden."
+  tags: [master]
