@@ -120,7 +120,7 @@
 
 #v(10pt)
 #grid(
-  columns: (52pt, auto),
+  columns: (42pt, auto),
   row-gutter: 3.5pt,
   [Mail:], [#data.profile.emails.at(0) \ #data.profile.emails.at(1)],
   [Web:], [#link("https://" + data.profile.web)[#underline(text(fill: color-link)[#data.profile.web])]],
