@@ -12,6 +12,12 @@
   text: "**Second Advisor for PhD thesis** Marc Löchner, “Privacy-aware social media data processing”"
   tags:
     - phd
+- id: thesis-samaniego-cruz-2026
+  period: "2026"
+  level: master
+  institution: "TU Dresden"
+  text: "**Master thesis Jennyfer Patricia Samaniego Cruz**, “Persuasive Design on Thematic Maps with Generative Artificial Intelligence”, Cartography M.Sc. (TUM / TUD / TUW / UT), Institute of Cartography, TU Dresden."
+  tags: [master]
 - id: thesis-2
   period: "2025"
   level: master
@@ -63,9 +69,3 @@
   text: "**Master thesis Jan Kolditz**, “User-generated geographic content supporting geo-visual analysis of tourist behavior” (transl.), Faculty of Environmental Sciences, Institute of Cartography, TU Dresden."
   tags:
     - master
-- id: thesis-samaniego-cruz-2026
-  period: "2026"
-  level: master
-  institution: "TU Dresden"
-  text: "**Master thesis Jennyfer Patricia Samaniego Cruz**, “Persuasive Design on Thematic Maps with Generative Artificial Intelligence”, Cartography M.Sc. (TUM / TUD / TUW / UT), Institute of Cartography, TU Dresden."
-  tags: [master]
