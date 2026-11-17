@@ -7,7 +7,7 @@ variables:
 
 build:
   stage: build
-  image: registry.forst.alexanderdunkel.com/tools/typst-cv:latest
+  image: "$CI_REGISTRY/tools/typst-cv:latest"
   tags:
     - dind-runner
   script:
@@ -22,7 +22,7 @@ build:
 
 deploy:
   stage: deploy
-  image: registry.forst.alexanderdunkel.com/tools/typst-cv:latest
+  image: "$CI_REGISTRY/tools/typst-cv:latest"
   tags:
     - dind-runner
   before_script:
