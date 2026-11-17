@@ -93,14 +93,14 @@
 
 #let section-heading(num, title) = heading(level: 1, bookmarked: true)[#num #upper(title)]
 
-#let sub-table(title, subtitle: none, cols: (83.5pt, 1fr), rows) = {
+#let sub-grid(title, subtitle: none, cols: (83.5pt, 1fr), rows) = {
   if rows.len() == 0 { return }
-  table(
+  grid(
     columns: cols,
     inset: (x: 6pt, y: 5.5pt),
     stroke: none,
-    table.header(
-      table.cell(colspan: cols.len(), stroke: (bottom: dot-stroke), align: bottom)[
+    grid.header(
+      grid.cell(colspan: cols.len(), stroke: (bottom: dot-stroke), align: bottom)[
         #text(weight: "bold")[#upper(title)]
         #if subtitle != none [ #text(weight: "regular")[#subtitle]]
       ]
@@ -109,6 +109,15 @@
   )
   v(6pt)
 }
+
+// Dekoratives CV-Badge als PDF-Artefakt markieren:
+#place(top + right, dx: 0pt, dy: 0pt)[
+  #pdf.artifact[
+    #box(width: 74.4pt, height: 46.8pt, fill: color-badge-bg, align(center + horizon)[
+      #text(size: 40pt, weight: "bold", fill: white, tracking: 0.1em)[CV]
+    ])
+  ]
+]
 
 // --- PAGE 1 HEADER & TOP-RIGHT CV BADGE ---
 #place(top + right, dx: 0pt, dy: 0pt)[
@@ -141,7 +150,7 @@
 
 // --- 01 EDUCATION ---
 #section-heading("01", "Education")
-#table(
+#grid(
   columns: (67.2pt, 266.4pt),
   inset: (x: 4pt, y: 5.5pt),
   stroke: none,
@@ -155,11 +164,11 @@
 #section-heading("02", "Academic Appointments")
 #for (idx, inst) in data.appointments.enumerate() {
   let is-last = idx == data.appointments.len() - 1
-  table(
+  grid(
     columns: (67.16pt, 435.64pt),
     inset: (x: 4pt, y: 5.5pt),
     stroke: none,
-    table.header(
+    grid.header(
       [],
       [
         #strong(inst.institution), #inst.location
@@ -168,7 +177,7 @@
     ),
     ..inst.roles.enumerate().map(((r_idx, r)) => {
       let row-stroke = if (not is-last and r_idx == inst.roles.len() - 1) { (bottom: dot-stroke) } else { none }
-      (table.cell(stroke: row-stroke)[#r.period], table.cell(stroke: row-stroke)[#rich(r.title)])
+      (grid.cell(stroke: row-stroke)[#r.period], grid.cell(stroke: row-stroke)[#rich(r.title)])
     }).flatten()
   )
   v(4pt)
@@ -176,7 +185,7 @@
 
 // --- 03 PROFESSIONAL EXPERIENCE ---
 #section-heading("03", "Professional Experience")
-#table(
+#grid(
   columns: (83.5pt, 1fr),
   inset: (x: 6pt, y: 5.5pt),
   stroke: none,
@@ -185,60 +194,60 @@
 
 // --- 04 SCHOLARLY WORK ---
 #section-heading("04", "Scholarly Work")
-#sub-table("Peer Reviewed", subtitle: "(first-authored)", data.publications.peer_reviewed.map(p => ([#p.year], [#rich(p.citation)])))
-#sub-table("Articles & Conference Papers", subtitle: "(co-authored)", data.publications.coauthored.map(p => ([#p.year], [#rich(p.citation)])))
-#sub-table("Monographs, Book Chapters & Articles", data.publications.monographs.map(p => ([#p.year], [#rich(p.citation)])))
-#sub-table("Data Publications", data.publications.data.map(p => ([#p.year], [#rich(p.citation)])))
-#sub-table("Invited Lectures, Presentations, Symposia", data.talks.map(t => ([#t.year], [#rich(t.text)])))
+#sub-grid("Peer Reviewed", subtitle: "(first-authored)", data.publications.peer_reviewed.map(p => ([#p.year], [#rich(p.citation)])))
+#sub-grid("Articles & Conference Papers", subtitle: "(co-authored)", data.publications.coauthored.map(p => ([#p.year], [#rich(p.citation)])))
+#sub-grid("Monographs, Book Chapters & Articles", data.publications.monographs.map(p => ([#p.year], [#rich(p.citation)])))
+#sub-grid("Data Publications", data.publications.data.map(p => ([#p.year], [#rich(p.citation)])))
+#sub-grid("Invited Lectures, Presentations, Symposia", data.talks.map(t => ([#t.year], [#rich(t.text)])))
 
 // --- 05 TEACHING ---
 #section-heading("05", "Teaching")
-#sub-table("Lectures and Workshops", data.teaching.map(t => ([#t.period], [#rich(t.text)])))
-#sub-table("Thesis Supervision", data.theses.map(t => ([#t.period], [#rich(t.text)])))
-#sub-table("Review and Committee Work", data.service.review_committee.map(s => ([#s.period], [#rich(s.text)])))
-#sub-table("Continuing Education", data.service.continuing_education.map(s => ([#s.period], [#rich(s.text)])))
+#sub-grid("Lectures and Workshops", data.teaching.map(t => ([#t.period], [#rich(t.text)])))
+#sub-grid("Thesis Supervision", data.theses.map(t => ([#t.period], [#rich(t.text)])))
+#sub-grid("Review and Committee Work", data.service.review_committee.map(s => ([#s.period], [#rich(s.text)])))
+#sub-grid("Continuing Education", data.service.continuing_education.map(s => ([#s.period], [#rich(s.text)])))
 
 // --- 06 PROJECTS, GRANTS AND RECOGNITION ---
 #section-heading("06", "Projects, Grants and Recognition")
-#sub-table("Project Application / Grants", cols: (83.5pt, 324.5pt, 94.45pt), data.grants.awarded.map(g => ([#g.period], [#rich(g.text)], [#g.amount])))
+#sub-grid("Project Application / Grants", cols: (83.5pt, 324.5pt, 94.45pt), data.grants.awarded.map(g => ([#g.period], [#rich(g.text)], [#g.amount])))
 
 #if data.grants.pending.len() > 0 {
   [Applications currently being written or submitted:]
-  table(
+  grid(
     columns: (83.5pt, 324.5pt, 94.45pt),
     inset: (x: 6pt, y: 5.5pt),
     stroke: (top: dot-stroke),
-    ..data.grants.pending.map(g => (table.cell(stroke: none)[#g.period], table.cell(stroke: none)[#rich(g.text)], table.cell(stroke: none)[#g.amount])).flatten()
+    ..data.grants.pending.map(g => (grid.cell(stroke: none)[#g.period], grid.cell(stroke: none)[#rich(g.text)], grid.cell(stroke: none)[#g.amount])).flatten()
   )
 }
 
 #if data.grants.declined.len() > 0 {
   [Declined Grants:]
-  table(
+  grid(
     columns: (83.5pt, 324.5pt, 94.45pt),
     inset: (x: 6pt, y: 5.5pt),
     stroke: none,
-    ..data.grants.declined.map(g => (table.cell(stroke: (bottom: dot-stroke))[#g.period], table.cell(stroke: (bottom: dot-stroke))[#rich(g.text)], table.cell(stroke: (bottom: dot-stroke))[#g.amount])).flatten()
+    ..data.grants.declined.map(g => (grid.cell(stroke: (bottom: dot-stroke))[#g.period], grid.cell(stroke: (bottom: dot-stroke))[#rich(g.text)], grid.cell(stroke: (bottom: dot-stroke))[#g.amount])).flatten()
   )
 }
 
 #if data.grants.phd_projects.len() > 0 {
   [Project Work (PhD-phase):]
-  table(
+  grid(
     columns: (83.5pt, 324.5pt, 94.45pt),
     inset: (x: 6pt, y: 5.5pt),
     stroke: none,
-    ..data.grants.phd_projects.map(g => (table.cell(stroke: (bottom: dot-stroke))[#g.period], table.cell(stroke: (bottom: dot-stroke))[#rich(g.text)], table.cell(stroke: (bottom: dot-stroke))[])).flatten()
+    ..data.grants.phd_projects.map(g => (grid.cell(stroke: (bottom: dot-stroke))[#g.period], grid.cell(stroke: (bottom: dot-stroke))[#rich(g.text)], grid.cell(stroke: (bottom: dot-stroke))[])).flatten()
   )
 }
 
-#sub-table("Fellowships and Awards", data.awards.map(a => ([#a.year], [#rich(a.text)])))
-#sub-table("Freelance & Contract Work, Volunteering", data.freelance.map(f => ([#f.period], [#rich(f.text)])))
-#sub-table("Magazine / Media Coverage, Outreach", data.media.map(m => ([#m.year], [#rich(m.text)])))
+#sub-grid("Fellowships and Awards", data.awards.map(a => ([#a.year], [#rich(a.text)])))
+#sub-grid("Freelance & Contract Work, Volunteering", data.freelance.map(f => ([#f.period], [#rich(f.text)])))
+#sub-grid("Magazine / Media Coverage, Outreach", data.media.map(m => ([#m.year], [#rich(m.text)])))
 
 // --- 07 OPEN SOURCE AND TECHNOLOGY ---
 #section-heading("07", "Open Source and Technology")
-#sub-table("Projects, Packages and Frameworks", cols: (145.2pt, 357.6pt), data.software.map(s => (
+#sub-grid("Projects, Packages and Frameworks", cols: (145.2pt, 357.6pt), data.software.map(s => (
   [#link(s.url)[#underline(text(fill: color-link)[#s.label])]],
   [#rich(s.description)]
 )))
