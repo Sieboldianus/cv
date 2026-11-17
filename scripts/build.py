@@ -18,25 +18,33 @@ SITE_DIR = ROOT / "site"
 LINK_RE = re.compile(r"(\^?)\[([^\]]+)\]\(([^)]+)\)")
 
 
-def get_git_meta() -> tuple[str, str]:
-    last_update = datetime.date.today().strftime("%B %d, %Y")
+def get_git_meta() -> tuple[str, str, str]:
+    now = datetime.datetime.now()
+    last_update = now.strftime("%B %d, %Y")
+    iso_date = now.strftime("%Y-%m-%dT%H:%M:%S")
     commit_sha = os.environ.get("CI_COMMIT_SHORT_SHA", "")
     try:
         date_out = subprocess.check_output(
             ["git", "log", "-1", "--format=%cd", "--date=format:%B %d, %Y"],
             cwd=ROOT, text=True, stderr=subprocess.DEVNULL
         ).strip()
-        if date_out:
-            last_update = date_out
+        iso_out = subprocess.check_output(
+            ["git", "log", "-1", "--format=%cd", "--date=format:%Y-%m-%dT%H:%M:%S"],
+            cwd=ROOT, text=True, stderr=subprocess.DEVNULL
+        ).strip()
         sha_out = subprocess.check_output(
             ["git", "rev-parse", "--short", "HEAD"],
             cwd=ROOT, text=True, stderr=subprocess.DEVNULL
         ).strip()
+        if date_out:
+            last_update = date_out
+        if iso_out:
+            iso_date = iso_out
         if sha_out:
             commit_sha = sha_out
     except Exception:
         pass
-    return last_update, commit_sha
+    return last_update, iso_date, commit_sha
 
 
 def validate_urls(obj, path="root"):
@@ -104,7 +112,7 @@ def apply_rule(entries: list[dict], rule: dict | None, exclude_tags: set[str]) -
     return kept
 
 
-def resolve_view(raw: dict, view_cfg: dict, last_update: str, commit_sha: str) -> dict:
+def resolve_view(raw: dict, view_cfg: dict, last_update: str, iso_date: str, commit_sha: str) -> dict:
     exclude = set(view_cfg.get("exclude_tags", []))
     rules = view_cfg.get("rules", {})
     if view_cfg.get("include_all"):
@@ -116,6 +124,7 @@ def resolve_view(raw: dict, view_cfg: dict, last_update: str, commit_sha: str) -
         "meta": {
             "view": view_cfg["name"],
             "last_update": last_update,
+            "iso_date": iso_date,
             "commit_sha": commit_sha,
             "closing_note": view_cfg.get("closing_note", "").strip(),
         },
@@ -174,7 +183,7 @@ def main():
     DIST_DIR.mkdir(exist_ok=True)
     SITE_DIR.mkdir(exist_ok=True)
     raw = load_all_data()
-    last_update, commit_sha = get_git_meta()
+    last_update, iso_date, commit_sha = get_git_meta()
 
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=False)
     env.filters["rich"] = md_to_html
@@ -187,7 +196,7 @@ def main():
 
     for view_name, pdf_name, html_name in outputs:
         view_cfg = yaml.safe_load((VIEWS_DIR / f"{view_name}.yaml").read_text(encoding="utf-8"))
-        resolved = resolve_view(raw, view_cfg, last_update, commit_sha)
+        resolved = resolve_view(raw, view_cfg, last_update, iso_date, commit_sha)
 
         json_path = DIST_DIR / f"resolved_{view_name}.json"
         json_path.write_text(json.dumps(resolved, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -195,6 +204,7 @@ def main():
         subprocess.run(
             [
                 "typst", "compile",
+                "--pdf-standard", "1.7,a-2b,ua-1",
                 "--root", str(ROOT),
                 "--input", f"data={json_path.relative_to(ROOT)}",
                 str(ROOT / "templates/cv.typ"),

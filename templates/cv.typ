@@ -55,9 +55,16 @@
   }
 }
 
+#let dt-parts = data.meta.iso_date.split("T")
+#let d = dt-parts.at(0).split("-").map(int)
+#let t = dt-parts.at(1).split(":").map(int)
+
 #set document(
-  title: data.profile.name + " - Curriculum Vitae",
+  title: data.profile.name + " - Curriculum Vitae" + if data.meta.view == "audit" { " (Audit Log)" } else { "" },
   author: data.profile.name,
+  description: "Curriculum Vitae of Dr.-Ing. habil. Alexander Dunkel — Senior Scientist, Geovisual Analytics, Cartography, Spatial Data Science." + if data.meta.commit_sha != "" { " [Commit #" + data.meta.commit_sha + "]" } else { "" },
+  keywords: ("Curriculum Vitae", "Geovisual Analytics", "Cartography", "Spatial Data Science", "GIS", "IOER", "TU Dresden"),
+  date: datetime(year: d.at(0), month: d.at(1), day: d.at(2), hour: t.at(0), minute: t.at(1), second: t.at(2)),
 )
 
 #set page(
@@ -77,12 +84,14 @@
 #set text(font: "EB Garamond", size: 10pt, fill: black, lang: "en")
 #set par(leading: 5.8pt, spacing: 8pt)
 
-#let section-heading(num, title) = {
+#show heading.where(level: 1): it => {
   v(16pt, weak: true)
   block(sticky: true, below: 9pt)[
-    #text(size: 14pt, weight: "bold")[#num #upper(title)]
+    #text(size: 14pt, weight: "bold")[#it.body]
   ]
 }
+
+#let section-heading(num, title) = heading(level: 1, bookmarked: true)[#num #upper(title)]
 
 #let sub-table(title, subtitle: none, cols: (83.5pt, 1fr), rows) = {
   if rows.len() == 0 { return }
