@@ -82,7 +82,7 @@ def main():
             "A visual counterpart of this CV can be found at "
             "[alexanderdunkel.com/time](https://alexanderdunkel.com/time)\n\n"
             "I try to do transparent, open, and reproducible science, as much as possible. "
-            "Most of what I do or create is shared at [ad.vgiscience.org/links](https://ad.vgiscience.org/links). "
+            "Most of what I do or create is shared at [links.alexanderdunkel.com/](https://links.alexanderdunkel.com/). "
             "I also occasionally toot [@alex@himself.alexanderdunkel.com](https://himself.alexanderdunkel.com/). "
             "My personal efforts at self-hosting and digital liberation are documented at [du.nkel.dev](https://du.nkel.dev).\n\n"
             "My git repositories can be found at [github.com/sieboldianus](https://github.com/sieboldianus), "
