@@ -1,3 +1,6 @@
+{% macro heading(tag, id, text, subtitle=None) %}
+<{{ tag }} id="{{ id }}"><a class="heading-link" href="#{{ id }}"><span class="anchor" aria-hidden="true">#</span>{{ text }}{% if subtitle %} <span>{{ subtitle }}</span>{% endif %}</a></{{ tag }}>
+{% endmacro -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +14,24 @@
     header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
     .cv-badge { background: #e4e5e8; color: #fff; font-weight: 700; font-size: 2rem; padding: 0.4rem 0.9rem; letter-spacing: 0.08em; }
     h1 { font-size: 1.4rem; letter-spacing: 0.04em; margin: 0 0 0.2rem; text-transform: uppercase; }
+    h2, h3 { position: relative; scroll-margin-top: 1rem; }
+    .heading-link { color: inherit; text-decoration: none; display: inline-block; }
+    .anchor {
+      position: absolute; left: -1.15rem; width: 1.15rem; top: 0;
+      color: var(--link); opacity: 0; font-weight: 400;
+      transition: opacity 0.12s ease;
+    }
+    .heading-link:hover .anchor,
+    .heading-link:focus-visible .anchor { opacity: 1; }
     h2 { font-size: 1.15rem; text-transform: uppercase; margin: 2.2rem 0 0.7rem; }
     h3 { font-size: 0.95rem; text-transform: uppercase; border-bottom: 1px dotted var(--rule); padding-bottom: 0.2rem; margin: 1.4rem 0 0.6rem; }
     h3 span { text-transform: none; font-weight: 400; }
+    .anchor {
+      position: absolute; left: -1.15rem; top: 0;
+      text-decoration: none; color: var(--link); opacity: 0;
+      font-weight: 400; transition: opacity 0.12s ease;
+    }
+    h2:hover .anchor, h3:hover .anchor, .anchor:focus { opacity: 1; }
     a { color: var(--link); }
     ul { margin: 0.3rem 0; padding-left: 1.2rem; }
     .toolbar { font-size: 0.92rem; color: var(--muted); border-bottom: 1px solid #eee; padding-bottom: 0.8rem; margin-bottom: 1.8rem; }
@@ -21,11 +39,18 @@
     .row { display: grid; grid-template-columns: 7rem 1fr; gap: 0.4rem 1.2rem; margin-bottom: 0.65rem; }
     .row-3 { grid-template-columns: 7rem 1fr auto; }
     .row-wide { grid-template-columns: 12.5rem 1fr; }
+    .appt { padding-bottom: 0.35rem; margin-bottom: 0.9rem; border-bottom: 1px dotted var(--rule); }
+    .appt:last-of-type { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+    .appt-head { margin-bottom: 0.4rem; }
     .year { color: var(--muted); font-variant-numeric: tabular-nums; }
     .amount { font-variant-numeric: tabular-nums; white-space: nowrap; }
     footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #eee; font-size: 0.92rem; color: var(--muted); }
     footer .closing-main, footer .closing-note { color: var(--text); }
-    @media (max-width: 640px) { .row, .row-3, .row-wide { grid-template-columns: 1fr; gap: 0.15rem; } }
+    @media (max-width: 640px) {
+      .row, .row-3, .row-wide { grid-template-columns: 1fr; gap: 0.15rem; }
+      .appt-head .year:empty { display: none; }
+      .anchor { position: static; width: auto; margin-right: 0.35rem; opacity: 0.35; }
+    }
   </style>
 </head>
 <body>
@@ -51,55 +76,60 @@
     <div class="cv-badge" aria-hidden="true">CV</div>
   </header>
 
-  <h2>01 Education</h2>
+  {{ heading("h2", "education", "01 Education") }}
   {% for e in cv.education %}<div class="row"><div class="year">{{ e.period }}</div><div><strong>{{ e.institution }}</strong>, {{ e.country }}<br>{{ e.details | rich }}</div></div>{% endfor %}
 
-  <h2>02 Academic Appointments</h2>
+  {{ heading("h2", "appointments", "02 Academic Appointments") }}
   {% for inst in cv.appointments %}
-    <p><strong>{{ inst.institution }}</strong>, {{ inst.location }}{% if inst.department %}<br>{{ inst.department }}{% endif %}</p>
-    {% for r in inst.roles %}<div class="row"><div class="year">{{ r.period }}</div><div>{{ r.title | rich }}</div></div>{% endfor %}
+    <div class="appt">
+      <div class="row appt-head">
+        <div class="year"></div>
+        <div><strong>{{ inst.institution }}</strong>, {{ inst.location }}{% if inst.department %}<br>{{ inst.department }}{% endif %}</div>
+      </div>
+      {% for r in inst.roles %}<div class="row"><div class="year">{{ r.period }}</div><div>{{ r.title | rich }}</div></div>{% endfor %}
+    </div>
   {% endfor %}
 
-  <h2>03 Professional Experience</h2>
+  {{ heading("h2", "experience", "03 Professional Experience") }}
   {% for e in cv.experience %}<div class="row"><div class="year">{{ e.period }}</div><div><strong>{{ e.organization }}</strong>, {{ e.location }}</div></div>{% endfor %}
 
-  <h2>04 Scholarly Work</h2>
-  <h3>Peer Reviewed <span>(first-authored)</span></h3>
+  {{ heading("h2", "scholarly-work", "04 Scholarly Work") }}
+  {{ heading("h3", "peer-reviewed", "Peer Reviewed", "(first-authored)") }}
   {% for p in cv.publications.peer_reviewed %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
-  <h3>Articles &amp; Conference Papers <span>(co-authored)</span></h3>
+  {{ heading("h3", "co-authored", "Articles & Conference Papers", "(co-authored)") }}
   {% for p in cv.publications.coauthored %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
-  <h3>Monographs, Book Chapters &amp; Articles</h3>
+  {{ heading("h3", "monographs", "Monographs, Book Chapters & Articles") }}
   {% for p in cv.publications.monographs %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
-  <h3>Data Publications</h3>
+  {{ heading("h3", "data-publications", "Data Publications") }}
   {% for p in cv.publications.data %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
-  <h3>Invited Lectures, Presentations, Symposia</h3>
+  {{ heading("h3", "talks", "Invited Lectures, Presentations, Symposia") }}
   {% for t in cv.talks %}<div class="row"><div class="year">{{ t.year }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
 
-  <h2>05 Teaching</h2>
-  <h3>Lectures and Workshops</h3>
+  {{ heading("h2", "teaching", "05 Teaching") }}
+  {{ heading("h3", "workshops", "Lectures and Workshops") }}
   {% for t in cv.teaching %}<div class="row"><div class="year">{{ t.period }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
-  <h3>Thesis Supervision</h3>
+  {{ heading("h3", "theses", "Thesis Supervision") }}
   {% for t in cv.theses %}<div class="row"><div class="year">{{ t.period }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
-  <h3>Review and Committee Work</h3>
+  {{ heading("h3", "service", "Review and Committee Work") }}
   {% for s in cv.service.review_committee %}<div class="row"><div class="year">{{ s.period }}</div><div>{{ s.text | rich }}</div></div>{% endfor %}
-  <h3>Continuing Education</h3>
+  {{ heading("h3", "continuing-education", "Continuing Education") }}
   {% for s in cv.service.continuing_education %}<div class="row"><div class="year">{{ s.period }}</div><div>{{ s.text | rich }}</div></div>{% endfor %}
 
-  <h2>06 Projects, Grants and Recognition</h2>
-  <h3>Project Application / Grants</h3>
+  {{ heading("h2", "projects", "06 Projects, Grants and Recognition") }}
+  {{ heading("h3", "grants", "Project Application / Grants") }}
   {% for g in cv.grants.awarded %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}
   {% if cv.grants.pending %}<p>Applications currently being written or submitted:</p>{% for g in cv.grants.pending %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}{% endif %}
   {% if cv.grants.declined %}<p>Declined Grants:</p>{% for g in cv.grants.declined %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}{% endif %}
   {% if cv.grants.phd_projects %}<p>Project Work (PhD-phase):</p>{% for g in cv.grants.phd_projects %}<div class="row"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div></div>{% endfor %}{% endif %}
-  <h3>Fellowships and Awards</h3>
+  {{ heading("h3", "awards", "Fellowships and Awards") }}
   {% for a in cv.awards %}<div class="row"><div class="year">{{ a.year }}</div><div>{{ a.text | rich }}</div></div>{% endfor %}
-  <h3>Freelance &amp; Contract Work, Volunteering</h3>
+  {{ heading("h3", "freelance", "Freelance & Contract Work, Volunteering") }}
   {% for f in cv.freelance %}<div class="row"><div class="year">{{ f.period }}</div><div>{{ f.text | rich }}</div></div>{% endfor %}
-  <h3>Magazine / Media Coverage, Outreach</h3>
+  {{ heading("h3", "media", "Magazine / Media Coverage, Outreach") }}
   {% for m in cv.media %}<div class="row"><div class="year">{{ m.year }}</div><div>{{ m.text | rich }}</div></div>{% endfor %}
 
-  <h2>07 Open Source and Technology</h2>
-  <h3>Projects, Packages and Frameworks</h3>
+  {{ heading("h2", "software", "07 Open Source and Technology") }}
+  {{ heading("h3", "packages", "Projects, Packages and Frameworks") }}
   {% for s in cv.software %}<div class="row row-wide"><div><a href="{{ s.url }}">{{ s.label }}</a></div><div>{{ s.description | rich }}</div></div>{% endfor %}
 
   <footer>
