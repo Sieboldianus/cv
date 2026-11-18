@@ -17,6 +17,20 @@ SITE_DIR = ROOT / "site"
 
 LINK_RE = re.compile(r"(\^?)\[([^\]]+)\]\(([^)]+)\)")
 
+NBSP = "\u00A0"
+MONTHS = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)"
+
+
+def apply_nbsp(obj):
+    if isinstance(obj, dict):
+        return {k: apply_nbsp(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [apply_nbsp(v) for v in obj]
+    if isinstance(obj, str):
+        obj = re.sub(rf"\b({MONTHS}) (\d{{1,2}}), (\d{{4}})\b", rf"\1{NBSP}\2,{NBSP}\3", obj)
+        obj = re.sub(rf"\b({MONTHS}) (\d{{1,2}})\b", rf"\1{NBSP}\2", obj)
+        obj = re.sub(r"\b(TU|UC|Dr\.|Prof\.|Vol\.|No\.|S\.) ", rf"\1{NBSP}", obj)
+    return obj
 
 def get_git_meta() -> tuple[str, str, str]:
     now = datetime.datetime.now()
@@ -67,6 +81,7 @@ def load_all_data() -> dict:
     for f in sorted(DATA_DIR.glob("*.yaml")):
         content = yaml.safe_load(f.read_text(encoding="utf-8"))
         validate_urls(content, f.stem)
+        content = apply_nbsp(content)
         data[f.stem] = content
     return data
 
