@@ -84,6 +84,7 @@
 #set text(font: "EB Garamond", size: 10pt, fill: black, lang: "en")
 #set par(leading: 5.8pt, spacing: 8pt)
 
+// PDF Bookmarks
 #show heading.where(level: 1): it => {
   v(16pt, weak: true)
   block(sticky: true, below: 9pt)[
@@ -105,6 +106,32 @@
         #if subtitle != none [ #text(weight: "regular")[#subtitle]]
       ]
     ),
+    ..rows.flatten()
+  )
+  v(6pt)
+}
+
+#show heading.where(level: 2): it => {
+  set text(size: 10pt, weight: "regular")
+  block(
+    width: 100%,
+    sticky: true,
+    above: 4pt,
+    below: 0pt,
+    inset: (x: 6pt, top: 6pt, bottom: 5.5pt),
+    stroke: (bottom: dot-stroke),
+  )[#it.body]
+}
+
+#let sub-grid(title, subtitle: none, cols: (83.5pt, 1fr), rows) = {
+  if rows.len() == 0 { return }
+  heading(level: 2, bookmarked: true)[
+    #strong(upper(title))#if subtitle != none [ #subtitle]
+  ]
+  grid(
+    columns: cols,
+    inset: (x: 6pt, y: 5.5pt),
+    stroke: none,
     ..rows.flatten()
   )
   v(6pt)
