@@ -211,13 +211,15 @@
 }
 
 // --- 03 PROFESSIONAL EXPERIENCE ---
-#section-heading("03", "Professional Experience")
-#grid(
-  columns: (83.5pt, 1fr),
-  inset: (x: 6pt, y: 5.5pt),
-  stroke: none,
-  ..data.experience.map(e => ([#e.period], [#strong(e.organization), #e.location])).flatten()
-)
+#block(breakable: false)[
+  #section-heading("03", "Professional Experience")
+  #grid(
+    columns: (83.5pt, 1fr),
+    inset: (x: 6pt, y: 5.5pt),
+    stroke: none,
+    ..data.experience.map(e => ([#e.period], [#strong(e.organization), #e.location])).flatten()
+  )
+]
 
 // --- 04 SCHOLARLY WORK ---
 #section-heading("04", "Scholarly Work")
