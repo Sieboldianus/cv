@@ -28,9 +28,7 @@ rules:
         Diller Scofidio + Renfro / Field Operations, WEST 8, DATAlab Toronto).
 
 closing_note: >
-  This is the curated version of my CV. I have omitted or summarized minor consulting
-  contracts, individual Master/Diploma theses, PhD-phase project work, and unfunded
-  grant proposals here. The complete, unredacted audit version is published for
+  This is the curated version of my CV. I have omitted or summarized information that I found of no broader relevancy. The complete, unredacted audit version is published for
   transparency at
   [alexanderdunkel.com/cv_alexanderdunkel_audit.pdf](https://www.alexanderdunkel.com/cv_alexanderdunkel_audit.pdf).
-  Source and reproducible Typst/CI pipeline: [github.com/Sieboldianus/cv](https://github.com/Sieboldianus/cv).
+  This CV is built with Typst and CI&CD. Public Source: [github.com/Sieboldianus/cv](https://github.com/Sieboldianus/cv).
