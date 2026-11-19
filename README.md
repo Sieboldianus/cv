@@ -7,6 +7,8 @@ This is my reproducible, single-point-of-truth CV pipeline built with YAML, Pyth
 - Standard CV: [HTML](https://www.alexanderdunkel.com/cv.html), [PDF](https://www.alexanderdunkel.com/cv_alexanderdunkel.pdf)
 - Full Academic Audit Log: [HTML](https://www.alexanderdunkel.com/cv_audit.html), [PDF](https://www.alexanderdunkel.com/cv_alexanderdunkel_audit.pdf)
 
+The PDF is 100% compliant with PDF/UA-1 and WCAG 2.2.
+
 ## Concept
 
 All career records are maintained once in `data/*.yaml` as an unredacted log. Declarative view definitions in `views/` control what gets included, omitted, or aggregated:
