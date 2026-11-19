@@ -167,7 +167,7 @@
 #grid(
   columns: (42pt, auto),
   row-gutter: 3.5pt,
-  [Mail:], [#data.profile.emails.at(0) \ #data.profile.emails.at(1)],
+  [Mail:], [#link("mailto:" + data.profile.emails.at(0))[#data.profile.emails.at(0)] \ #link("mailto:" + data.profile.emails.at(1))[#data.profile.emails.at(1)]],
   [Web:], [#link("https://" + data.profile.web)[#underline(text(fill: color-link)[#data.profile.web])]],
   [P:], [#data.profile.phone],
   [ORCID:], [#link("https://orcid.org/" + data.profile.orcid)[#underline(text(fill: color-link)[#data.profile.orcid])]],
