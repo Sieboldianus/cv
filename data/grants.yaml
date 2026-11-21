@@ -28,14 +28,14 @@ awarded:
     status: awarded
     tags:
       - awarded
-pending:
+submitted:
   - id: grant-pending-0
-    period: 2024–present
+    period: "2026"
     text: "“Assessment of social cohesion of neighbourhoods, districts and regions: A German information system for integrating geo-social data in urban decision making – GEO-S(O)IS”, DFG Antrag im Förderprogramm “Wissenschaftliche Literaturversorgungs- und Informationssysteme” (LIS), Jan Goebel (DIW), Alexander Dunkel (IOER FB T & FDZ), Odile Sauzet (Universität Bielefeld, Statistics and Data Analysis)"
     amount: €1,286,152
-    status: pending
+    status: submitted
     tags:
-      - pending
+      - submitted
 declined:
   - id: grant-declined-0
     period: "2023"

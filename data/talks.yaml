@@ -20,6 +20,7 @@
   text: "**“Responsible Geo-Social Data for Measuring Social Cohesion: Privacy-Preserving Infrastructures, Behavioral Signals, and Synthetic Modeling”**, Computational Social Science (CSS) Workshop, Leibniz Institute of Ecological Urban and Regional Development (IOER), Dresden ^[slides](https://slides.ad.ioer.info/css_social_cohesion/) ^[post](https://links.alexanderdunkel.com/posts/2026-09-22-css-slides/)"
   tags:
     - core
+    - audit-only
 - id: talk-2
   year: "2026"
   text: "**“Who Owns the View? Corporate Sovereignty, Filter Bubbles, and the Struggle for Spatial Agency”**, Presentation, Leibniz-Lab Workshop “Umbrüche und Transformationen”, Leipzig ^[link](https://slides.ad.ioer.info/who_owns_the_view/)"
@@ -106,6 +107,7 @@
   text: "**“Taking into account the public’s view in landscape and urban planning: Big Data Potentials and Challenges”**, Workshop on visual communication methods in Regional Planning, Kassel"
   tags:
     - core
+    - audit-only
 - id: talk-18
   year: "2018"
   text: "**“Berücksichtigung der öffentlichen Wahrnehmung in der Raumentwicklung – Chancen durch nutzergenerierte Daten”**, 10. Dresdner Flächennutzungssymposium, IOER, Dresden"
@@ -117,6 +119,7 @@
   text: "**“Identifying Perceived Characteristics and the Collective Attribution of Values and Meaning from Social Media”**, presentation, Nexus Conference (Dresden)"
   tags:
     - core
+    - audit-only
 - id: talk-20
   year: "2017"
   text: "**“Visualizing VGI for application to the fields of landscape and urban planning”**, VGIscience Summer School (TU Dresden)"
@@ -125,7 +128,7 @@
     - audit-only
 - id: talk-21
   year: "2015"
-  text: "**“On Empathy and Data : crowdsourced mental maps”** presentation, with Dr. M. El Khafif (DATAlab), Toronto, Canada"
+  text: "**“On Empathy and Data: crowdsourced mental maps”** presentation, with Dr. M. El Khafif (DATAlab), Toronto, Canada"
   tags:
     - core
 - id: talk-22
