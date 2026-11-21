@@ -62,6 +62,7 @@ coauthored:
     citation: "**Hauthal, E., Dunkel, A., & Burghardt, D. (2021).** *The Representation of Spatial Context by Emojis within Location based Social Media.* Abstracts of the ICA, 3, 1–1. DOI: [10.5194/ica-abs-3-102-2021](https://doi.org/10.5194/ica-abs-3-102-2021)"
     tags:
       - core
+      - audit-only
   - id: co-5
     year: "2021"
     citation: "**Hauthal, E., Dunkel, A., & Burghardt, D. (2021).** *Emojis as Contextual Indicants in Location-Based Social Media Posts.* ISPRS International Journal of Geo-Information, 10(6), 407. DOI: [10.3390/ijgi10060407](https://doi.org/10.3390/ijgi10060407)"
@@ -77,6 +78,7 @@ coauthored:
     citation: "**Gröbe, M., Dunkel, A., & Burghardt, D. (2020).** *A new web map for the MeinGrün app.* Abstracts of the ICA, 2, 1–2. DOI: [10.5194/ica-abs-2-8-2020](https://doi.org/10.5194/ica-abs-2-8-2020)"
     tags:
       - core
+      - audit-only
   - id: co-8
     year: "2019"
     citation: "**Löchner, M., Dunkel, A., & Burghardt, D. (2019).** *Protecting privacy using HyperLogLog to process data from Location Based Social Networks.* In LESSON 2019—1st International Workshop on Legal and Ethical Issues in Crowdsourced Geographic Information. ^[link](https://www.cs.nuim.ie/~pmooney/lesson2019/)"
@@ -87,6 +89,7 @@ coauthored:
     citation: "**Andrienko, N., Andrienko, G., Chen, S., Burghardt, D., Dunkel, A., & Purves, R. (2019).** *Geovisual analysis of VGI for understanding people’s behaviour in relation to multifaceted context.* Abstracts of the ICA, 1, 1–2. DOI: [10.5194/ica-abs-1-10-2019](https://doi.org/10.5194/ica-abs-1-10-2019)"
     tags:
       - core
+      - audit-only
   - id: co-10
     year: "2019"
     citation: "**Hauthal, E., Burghardt, D., & Dunkel, A. (2019).** *Analyzing and Visualizing Emotional Reactions Expressed by Emojis in Location-Based Social Media.* ISPRS International Journal of Geo-Information, 8(3), 113. DOI: [10.3390/ijgi8030113](https://doi.org/10.3390/ijgi8030113)"
@@ -168,6 +171,7 @@ monographs:
     citation: "**Dunkel, A. (2010).** *Die Kulturlandschaft der Stadt Bad Schandau und ihrer Umgebung - ein Entwicklungskonzept*. Diploma Thesis, Landscape & Environmental Planning, TU-Dresden."
     tags:
       - core
+      - audit-only
 data:
   - id: data-0
     year: "2025"

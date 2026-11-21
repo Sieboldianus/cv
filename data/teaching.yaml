@@ -38,11 +38,13 @@
   text: "**Collaboration project “Community of Practice on E-Learning”** (CooPEL), TU Dresden"
   tags:
     - core
+    - audit-only
 - id: teach-7
   period: 2005–2008
   text: "**Computer Courses, Introduction to Spatial Modeling and GIS**, Landscape Architecture, TU Dresden"
   tags:
     - core
+    - audit-only
 - id: teach-8
   period: 2007–2019
   text: TU Dresden University Sports Centre, teaching beginner and advanced courses

@@ -38,6 +38,7 @@
   text: "**Travel Award**, TU Dresden, for 2012 ASLA National Conference, Phoenix, USA"
   tags:
     - core
+    - audit-only
 - id: award-8
   year: "2012"
   text: "**Award in Research**, American Society of Landscape Architects (ASLA), Student Awards 2012"

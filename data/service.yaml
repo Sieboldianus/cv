@@ -1,68 +1,72 @@
 review_committee:
-- id: rev-0
-  period: 2026–present
-  text: Editorial Board of Urban Transformations.
-  tags:
-  - core
-- id: rev-1
-  period: 2017–present
-  text: '**Peer review** for Journals Landscape and Urban Planning (Elsevier), Information Processing and Management, PLOS ONE, Information Visualization (SAGE), Gis.science - Die Zeitschrift für Geoinformatik, Journal of Spatial Information Science (JOSIS), Springer (KN), Ecosystem Services (Elsevier), Applied Sciences (MDPI), see [Orcid 0000-0003-1157-7967](https://orcid.org/0000-0003-1157-7967)'
-  tags:
-  - core
-- id: rev-2
-  period: '2026'
-  text: '**Research Funding Review** - Ad hoc reviewer for the German Research Foundation (DFG)'
-  tags:
-  - core
-- id: rev-3
-  period: 2025–2026
-  text: '**Leibniz PostDoc Representative** at IOER'
-  tags:
-  - core
-- id: rev-4
-  period: '2026'
-  text: '**Co-Organizer and Co-Chair (with C. Woiwode)**, Interactive Panel: *Asserting Nature’s Rights through Nature’s Voices: AI with and for Nature’s Sovereignty?*, IOER Conference 2026, Dresden. Invited panelists: Prof. Dr. A. Cierjacks (TU Dresden), Dr. S. Knauß (UFZ Leipzig), Dr. H. Beniwal (ScaDS.AI / TU Dresden).'
-  tags:
-  - core
-- id: rev-5
-  period: '2024'
-  text: |-
-    **Chair at the IOER Conference 2024** Space & Transformation, Track 2:
-    “Strategies and tools of transformative governance, planning, innovation and revitalization”
-  tags:
-  - core
-- id: rev-6
-  period: '2024'
-  text: '**Program Committee member**, EuroCarto 2024 Conference'
-  tags:
-  - core
-- id: rev-7
-  period: '2015'
-  text: |-
-    **External committee member**, Master thesis, Daniel Malka, “open territory”, University
-    of Waterloo, School of Architecture, Cambridge, Ontario, Canada
-  tags:
-  - core
-- id: rev-8
-  period: '2011'
-  text: |-
-    **Review panel**, LA203 Studio Presentations, Department of Landscape
-    Architecture and Environmental Planning, UC Berkeley, USA
-  tags:
-  - core
+  - id: rev-0
+    period: 2026–present
+    text: Editorial Board of Urban Transformations.
+    tags:
+      - core
+  - id: rev-1
+    period: 2017–present
+    text: "**Peer review** for Journals Landscape and Urban Planning (Elsevier), Information Processing and Management, PLOS ONE, Information Visualization (SAGE), Gis.science - Die Zeitschrift für Geoinformatik, Journal of Spatial Information Science (JOSIS), Springer (KN), Ecosystem Services (Elsevier), Applied Sciences (MDPI), see [Orcid 0000-0003-1157-7967](https://orcid.org/0000-0003-1157-7967)"
+    tags:
+      - core
+  - id: rev-2
+    period: "2026"
+    text: "**Research Funding Review** - Ad hoc reviewer for the German Research Foundation (DFG)"
+    tags:
+      - core
+  - id: rev-3
+    period: 2025–2026
+    text: "**Leibniz PostDoc Representative** at IOER"
+    tags:
+      - core
+  - id: rev-4
+    period: "2026"
+    text: "**Co-Organizer and Co-Chair (with C. Woiwode)**, Interactive Panel: *Asserting Nature’s Rights through Nature’s Voices: AI with and for Nature’s Sovereignty?*, IOER Conference 2026, Dresden. Invited panelists: Prof. Dr. A. Cierjacks (TU Dresden), Dr. S. Knauß (UFZ Leipzig), Dr. H. Beniwal (ScaDS.AI / TU Dresden)."
+    tags:
+      - core
+  - id: rev-5
+    period: "2024"
+    text: |-
+      **Chair at the IOER Conference 2024** Space & Transformation, Track 2:
+      “Strategies and tools of transformative governance, planning, innovation and revitalization”
+    tags:
+      - core
+  - id: rev-6
+    period: "2024"
+    text: "**Program Committee member**, EuroCarto 2024 Conference"
+    tags:
+      - core
+  - id: rev-7
+    period: "2015"
+    text: |-
+      **External committee member**, Master thesis, Daniel Malka, “open territory”, University
+      of Waterloo, School of Architecture, Cambridge, Ontario, Canada
+    tags:
+      - core
+  - id: rev-8
+    period: "2011"
+    text: |-
+      **Review panel**, LA203 Studio Presentations, Department of Landscape
+      Architecture and Environmental Planning, UC Berkeley, USA
+    tags:
+      - core
+      - audit-only
 continuing_education:
-- id: ce-0
-  period: '2025'
-  text: '**Professional presentation training, J. Puls, Institut für Vitale Kommunikation**, org. by IOER'
-  tags:
-  - core
-- id: ce-1
-  period: '2024'
-  text: '**Hochschuldidaktische Weiterbildung, Workshop “Präsentieren und Sprechen in der Lehre”**, 6AE, Hochschuldidaktik Sachsen (HDS), M. Sommer, TU Dresden, Zentrum für interdisziplinäres Lernen'
-  tags:
-  - core
-- id: ce-2
-  period: '2023'
-  text: '**Participation in TUD’s “E-Learning Gems” competition**, entry #AD1: Mobile Cartography Workshop Series - Social Media, Jupyter Lab & Tag Maps ^[link](https://tu-dresden.de/zill/materialien-und-tipps-fuer-die-lehre/good-practices/e-learning-schmuckstueck/schmuckstueck-galerie-2023/AD1)'
-  tags:
-  - core
+  - id: ce-0
+    period: "2025"
+    text: "**Professional presentation training, J. Puls, Institut für Vitale Kommunikation**, org. by IOER"
+    tags:
+      - core
+      - audit-only
+  - id: ce-1
+    period: "2024"
+    text: "**Hochschuldidaktische Weiterbildung, Workshop “Präsentieren und Sprechen in der Lehre”**, 6AE, Hochschuldidaktik Sachsen (HDS), M. Sommer, TU Dresden, Zentrum für interdisziplinäres Lernen"
+    tags:
+      - core
+      - audit-only
+  - id: ce-2
+    period: "2023"
+    text: "**Participation in TUD’s “E-Learning Gems” competition**, entry #AD1: Mobile Cartography Workshop Series - Social Media, Jupyter Lab & Tag Maps ^[link](https://tu-dresden.de/zill/materialien-und-tipps-fuer-die-lehre/good-practices/e-learning-schmuckstueck/schmuckstueck-galerie-2023/AD1)"
+    tags:
+      - core
+      - audit-only
