@@ -3,6 +3,7 @@ exclude_tags:
   - audit-only
 show_declined_grants: false
 show_phd_project_work: false
+show_submitted_grants: false
 
 rules:
   theses:

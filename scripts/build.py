@@ -154,7 +154,11 @@ def resolve_view(raw: dict, view_cfg: dict, last_update: str, iso_date: str, com
         "service": {k: filter_entries(v, exclude) for k, v in raw["service"].items()},
         "grants": {
             "awarded": filter_entries(grants.get("awarded", []), exclude),
-            "pending": filter_entries(grants.get("pending", []), exclude),
+            "pending": (
+                filter_entries(grants.get("submitted", grants.get("pending", [])), exclude)
+                if view_cfg.get("show_submitted_grants", True)
+                else []
+            ),
             "declined": filter_entries(grants.get("declined", []), exclude) if view_cfg.get("show_declined_grants", True) else [],
             "phd_projects": filter_entries(grants.get("phd_projects", []), exclude) if view_cfg.get("show_phd_project_work", True) else [],
         },

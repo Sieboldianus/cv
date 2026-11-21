@@ -1,5 +1,6 @@
 name: audit
 include_all: true
+show_submitted_grants: true
 show_declined_grants: true
 show_phd_project_work: true
 closing_note: >

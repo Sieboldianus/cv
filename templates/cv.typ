@@ -242,7 +242,7 @@
 #sub-grid("Project Application / Grants", cols: (83.5pt, 324.5pt, 94.45pt), data.grants.awarded.map(g => ([#g.period], [#rich(g.text)], [#g.amount])))
 
 #if data.grants.pending.len() > 0 {
-  [Applications currently being written or submitted:]
+  [Submitted grant applications (under review):]
   grid(
     columns: (83.5pt, 324.5pt, 94.45pt),
     inset: (x: 6pt, y: 5.5pt),
