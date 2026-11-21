@@ -83,6 +83,7 @@
 
 #set text(font: "EB Garamond", size: 10pt, fill: black, lang: "en")
 #set par(leading: 5.8pt, spacing: 8pt)
+#set grid.cell(breakable: false)
 
 // PDF Bookmarks
 #show heading.where(level: 1): it => {
