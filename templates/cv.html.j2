@@ -66,13 +66,13 @@
     {% if cv.meta.view == "production" %}<a href="cv_audit.html">Switch to Audit Log</a>{% else %}<a href="cv.html">Switch to CV</a>{% endif %} ·
     <a href="/">Home</a>
   </div>
-  <header>
+<header>
     <div>
       <h1>{{ cv.profile.name }}</h1>
       <div>{{ cv.profile.degrees }}</div>
       <p><strong>{{ cv.profile.role }}</strong><br>{{ cv.profile.affiliation_line1 }}<br>{{ cv.profile.affiliation_line2 }}</p>
       <div class="contact-grid">
-        <div>Mail:</div><div>{{ cv.profile.emails | join("<br>") }}</div>
+        <div>Mail:</div><div>{% for email in cv.profile.emails %}<a class="plain-link" href="mailto:{{ email }}">{{ email }}</a>{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
         <div>Web:</div><div><a href="https://{{ cv.profile.web }}">{{ cv.profile.web }}</a></div>
         <div>P:</div><div>{{ cv.profile.phone }}</div>
         {% if cv.profile.orcid %}<div>ORCID:</div><div><a href="https://orcid.org/{{ cv.profile.orcid }}">{{ cv.profile.orcid }}</a></div>{% endif %}
@@ -81,61 +81,101 @@
     <div class="cv-badge" aria-hidden="true">CV</div>
   </header>
 
-  {{ heading("h2", "education", "01 Education") }}
-  {% for e in cv.education %}<div class="row"><div class="year">{{ e.period }}</div><div><strong>{{ e.institution }}</strong>, {{ e.country }}<br>{{ e.details | rich }}</div></div>{% endfor %}
+  {% if cv.education %}
+    {{ heading("h2", "education", "01 Education") }}
+    {% for e in cv.education %}<div class="row"><div class="year">{{ e.period }}</div><div><strong>{{ e.institution }}</strong>, {{ e.country }}<br>{{ e.details | rich }}</div></div>{% endfor %}
+  {% endif %}
 
-  {{ heading("h2", "appointments", "02 Academic Appointments") }}
-  {% for inst in cv.appointments %}
-    <div class="appt">
-      <div class="row appt-head">
-        <div class="year"></div>
-        <div><strong>{{ inst.institution }}</strong>, {{ inst.location }}{% if inst.department %}<br>{{ inst.department }}{% endif %}</div>
+  {% if cv.appointments %}
+    {{ heading("h2", "appointments", "02 Academic Appointments") }}
+    {% for inst in cv.appointments %}
+      <div class="appt">
+        <div class="row appt-head">
+          <div class="year"></div>
+          <div><strong>{{ inst.institution }}</strong>, {{ inst.location }}{% if inst.department %}<br>{{ inst.department }}{% endif %}</div>
+        </div>
+        {% for r in inst.roles %}<div class="row"><div class="year">{{ r.period }}</div><div>{{ r.title | rich }}</div></div>{% endfor %}
       </div>
-      {% for r in inst.roles %}<div class="row"><div class="year">{{ r.period }}</div><div>{{ r.title | rich }}</div></div>{% endfor %}
-    </div>
-  {% endfor %}
+    {% endfor %}
+  {% endif %}
 
-  {{ heading("h2", "experience", "03 Professional Experience") }}
-  {% for e in cv.experience %}<div class="row"><div class="year">{{ e.period }}</div><div><strong>{{ e.organization }}</strong>, {{ e.location }}</div></div>{% endfor %}
+  {% if cv.experience %}
+    {{ heading("h2", "experience", "03 Professional Experience") }}
+    {% for e in cv.experience %}<div class="row"><div class="year">{{ e.period }}</div><div><strong>{{ e.organization }}</strong>, {{ e.location }}</div></div>{% endfor %}
+  {% endif %}
 
-  {{ heading("h2", "scholarly-work", "04 Scholarly Work") }}
-  {{ heading("h3", "peer-reviewed", "Peer Reviewed", "(first-authored)") }}
-  {% for p in cv.publications.peer_reviewed %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "co-authored", "Articles & Conference Papers", "(co-authored)") }}
-  {% for p in cv.publications.coauthored %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "monographs", "Monographs, Book Chapters & Articles") }}
-  {% for p in cv.publications.monographs %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "data-publications", "Data Publications") }}
-  {% for p in cv.publications.data %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "talks", "Invited Lectures, Presentations, Symposia") }}
-  {% for t in cv.talks %}<div class="row"><div class="year">{{ t.year }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
+  {% if cv.publications.peer_reviewed or cv.publications.coauthored or cv.publications.monographs or cv.publications.data or cv.talks %}
+    {{ heading("h2", "scholarly-work", "04 Scholarly Work") }}
+    {% if cv.publications.peer_reviewed %}
+      {{ heading("h3", "peer-reviewed", "Peer Reviewed", "(first-authored)") }}
+      {% for p in cv.publications.peer_reviewed %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.publications.coauthored %}
+      {{ heading("h3", "co-authored", "Articles & Conference Papers", "(co-authored)") }}
+      {% for p in cv.publications.coauthored %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.publications.monographs %}
+      {{ heading("h3", "monographs", "Monographs, Book Chapters & Articles") }}
+      {% for p in cv.publications.monographs %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.publications.data %}
+      {{ heading("h3", "data-publications", "Data Publications") }}
+      {% for p in cv.publications.data %}<div class="row"><div class="year">{{ p.year }}</div><div>{{ p.citation | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.talks %}
+      {{ heading("h3", "talks", "Invited Lectures, Presentations, Symposia") }}
+      {% for t in cv.talks %}<div class="row"><div class="year">{{ t.year }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
+    {% endif %}
+  {% endif %}
 
-  {{ heading("h2", "teaching", "05 Teaching") }}
-  {{ heading("h3", "workshops", "Lectures and Workshops") }}
-  {% for t in cv.teaching %}<div class="row"><div class="year">{{ t.period }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "theses", "Thesis Supervision") }}
-  {% for t in cv.theses %}<div class="row"><div class="year">{{ t.period }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "service", "Review and Committee Work") }}
-  {% for s in cv.service.review_committee %}<div class="row"><div class="year">{{ s.period }}</div><div>{{ s.text | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "continuing-education", "Continuing Education") }}
-  {% for s in cv.service.continuing_education %}<div class="row"><div class="year">{{ s.period }}</div><div>{{ s.text | rich }}</div></div>{% endfor %}
+  {% if cv.teaching or cv.theses or cv.service.review_committee or cv.service.continuing_education %}
+    {{ heading("h2", "teaching", "05 Teaching") }}
+    {% if cv.teaching %}
+      {{ heading("h3", "workshops", "Lectures and Workshops") }}
+      {% for t in cv.teaching %}<div class="row"><div class="year">{{ t.period }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.theses %}
+      {{ heading("h3", "theses", "Thesis Supervision") }}
+      {% for t in cv.theses %}<div class="row"><div class="year">{{ t.period }}</div><div>{{ t.text | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.service.review_committee %}
+      {{ heading("h3", "service", "Review and Committee Work") }}
+      {% for s in cv.service.review_committee %}<div class="row"><div class="year">{{ s.period }}</div><div>{{ s.text | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.service.continuing_education %}
+      {{ heading("h3", "continuing-education", "Continuing Education") }}
+      {% for s in cv.service.continuing_education %}<div class="row"><div class="year">{{ s.period }}</div><div>{{ s.text | rich }}</div></div>{% endfor %}
+    {% endif %}
+  {% endif %}
 
-  {{ heading("h2", "projects", "06 Projects, Grants and Recognition") }}
-  {{ heading("h3", "grants", "Project Application / Grants") }}
-  {% for g in cv.grants.awarded %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}
-  {% if cv.grants.pending %}<p>Applications currently being written or submitted:</p>{% for g in cv.grants.pending %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}{% endif %}
-  {% if cv.grants.declined %}<p>Declined Grants:</p>{% for g in cv.grants.declined %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}{% endif %}
-  {% if cv.grants.phd_projects %}<p>Project Work (PhD-phase):</p>{% for g in cv.grants.phd_projects %}<div class="row"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div></div>{% endfor %}{% endif %}
-  {{ heading("h3", "awards", "Fellowships and Awards") }}
-  {% for a in cv.awards %}<div class="row"><div class="year">{{ a.year }}</div><div>{{ a.text | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "freelance", "Freelance & Contract Work, Volunteering") }}
-  {% for f in cv.freelance %}<div class="row"><div class="year">{{ f.period }}</div><div>{{ f.text | rich }}</div></div>{% endfor %}
-  {{ heading("h3", "media", "Magazine / Media Coverage, Outreach") }}
-  {% for m in cv.media %}<div class="row"><div class="year">{{ m.year }}</div><div>{{ m.text | rich }}</div></div>{% endfor %}
+  {% if cv.grants.awarded or cv.grants.pending or cv.grants.declined or cv.grants.phd_projects or cv.awards or cv.freelance or cv.media %}
+    {{ heading("h2", "projects", "06 Projects, Grants and Recognition") }}
+    {% if cv.grants.awarded or cv.grants.pending or cv.grants.declined or cv.grants.phd_projects %}
+      {{ heading("h3", "grants", "Project Application / Grants") }}
+      {% for g in cv.grants.awarded %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}
+      {% if cv.grants.pending %}<p>Submitted grant applications (under review):</p>{% for g in cv.grants.pending %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}{% endif %}
+      {% if cv.grants.declined %}<p>Declined Grants:</p>{% for g in cv.grants.declined %}<div class="row row-3"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div><div class="amount">{{ g.amount }}</div></div>{% endfor %}{% endif %}
+      {% if cv.grants.phd_projects %}<p>Project Work (PhD-phase):</p>{% for g in cv.grants.phd_projects %}<div class="row"><div class="year">{{ g.period }}</div><div>{{ g.text | rich }}</div></div>{% endfor %}{% endif %}
+    {% endif %}
+    {% if cv.awards %}
+      {{ heading("h3", "awards", "Fellowships and Awards") }}
+      {% for a in cv.awards %}<div class="row"><div class="year">{{ a.year }}</div><div>{{ a.text | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.freelance %}
+      {{ heading("h3", "freelance", "Freelance & Contract Work, Volunteering") }}
+      {% for f in cv.freelance %}<div class="row"><div class="year">{{ f.period }}</div><div>{{ f.text | rich }}</div></div>{% endfor %}
+    {% endif %}
+    {% if cv.media %}
+      {{ heading("h3", "media", "Magazine / Media Coverage, Outreach") }}
+      {% for m in cv.media %}<div class="row"><div class="year">{{ m.year }}</div><div>{{ m.text | rich }}</div></div>{% endfor %}
+    {% endif %}
+  {% endif %}
 
-  {{ heading("h2", "software", "07 Open Source and Technology") }}
-  {{ heading("h3", "packages", "Projects, Packages and Frameworks") }}
-  {% for s in cv.software %}<div class="row row-wide"><div><a href="{{ s.url }}">{{ s.label }}</a></div><div>{{ s.description | rich }}</div></div>{% endfor %}
+  {% if cv.software %}
+    {{ heading("h2", "software", "07 Open Source and Technology") }}
+    {{ heading("h3", "packages", "Projects, Packages and Frameworks") }}
+    {% for s in cv.software %}<div class="row row-wide"><div><a href="{{ s.url }}">{{ s.label }}</a></div><div>{{ s.description | rich }}</div></div>{% endfor %}
+  {% endif %}
 
   <footer>
     <p class="closing-main">{{ cv.profile.closing_text | rich }}</p>
